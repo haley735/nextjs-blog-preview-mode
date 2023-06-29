@@ -1,17 +1,18 @@
 import Link from 'next/link'
 
-
-
 export default function Header({pages}) {
   console.log('pages', pages);
   function navList(pagesList){
-    pagesList.forEach(page => {
-      return <>
-        <a href={page.slug} className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-          {page.title}
-        </a>
-      </>
-    });
+    if(pagesList){
+      pagesList.forEach(page => {
+        return <>
+          <a href={page.slug} className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+            {page.title}
+          </a>
+        </>
+      });
+    }
+    
   }
   return (
     <>
