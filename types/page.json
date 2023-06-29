@@ -1,0 +1,48 @@
+{
+    "Main": {
+      "slug": {
+          "type": "Text",
+          "config": {
+              "label": "excerpt"
+          }
+          },
+      "heroImage": {
+        "type": "Image",
+        "config": {
+          "constraint": {},
+          "thumbnails": [],
+          "label": "coverimage"
+        }
+      },
+      "heroText": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+          "label": "title"
+        }
+      },
+      "authors": {
+        "type": "Link",
+        "config": {
+          "select": "document",
+          "customtypes": ["author"],
+          "label": "authors"
+        }
+      },
+      "posts": {
+        "type": "Link",
+        "config": {
+          "select": "document",
+          "customtypes": ["post"],
+          "label": "posts"
+        }
+      },
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "slug"
+        }
+      }
+    }
+  }
+  
