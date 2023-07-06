@@ -3,3 +3,9 @@
 @tailwind components;
 /* purgecss end ignore */
 @tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Gotham', system-ui, sans-serif;
+  }
+}
