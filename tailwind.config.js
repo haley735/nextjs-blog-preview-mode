@@ -7,9 +7,18 @@ module.exports = {
   ],
   theme: {
     extend: {
-      // fontFamily: {
-      //   sans: []
-      // },
+      fontFamily: {
+        'clarendon': ['clarendon-urw', 'serif'],
+        // 'clarendon-bold': ['clarendon-urw', 'serif', 700, 'normal'],
+        'look-script': ['look-script', 'san-serif'],
+        // 'look-script-bold': ['look-script', 'san-serif', 700, 'normal']
+        'gotham-black': ['Gotham-Black', 'san-serif'],
+        'gotham-light': ['Gotham-Light', 'san-serif'],
+        'gotham-bold': ['Gotham-Bold', 'san-serif'],
+        'gotham-medium': ['Gotham-Medium', 'san-serif'],
+        'gotham-book': ['Gotham-Book', 'san-serif'],
+
+      },
       colors: {
         'accent-1': '#FAFAFA',
         'accent-2': '#EAEAEA',
@@ -33,6 +42,12 @@ module.exports = {
         '6xl': '2.75rem',
         '7xl': '4.5rem',
         '8xl': '6.25rem',
+      },
+      letterSpacing: {
+        '1': '0em',
+        '2': '0.025em',
+        '3': '0.05em',
+        '4': '0.1em',
       },
       boxShadow: {
         small: '0 5px 10px rgba(0, 0, 0, 0.12)',

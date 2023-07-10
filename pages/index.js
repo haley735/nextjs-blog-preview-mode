@@ -18,7 +18,7 @@ export default function Index({ preview, allPosts, allPages, subpages, header })
         {/* <Head>
           <title>{`Next.js Blog Example with ${CMS_NAME}`}</title>
         </Head> */}
-        <Header pages={allPages} headerMedia={header} subpages={subpages}/>
+        <Header key='header-1' pages={allPages} headerMedia={header} subpages={subpages}/>
         <Container>
           <Intro />
           {heroPost && (
@@ -40,9 +40,13 @@ export default function Index({ preview, allPosts, allPages, subpages, header })
 
 export async function getStaticProps({ preview = false }) {
   const allPosts = (await getAllPostsForHome(preview)) ?? []
-  const allPages = (await getAllPagesForHome(preview)) ?? []
+  let allPages = (await getAllPagesForHome(preview)) ?? []
   const header = (await getHeaderForSlug(preview)) ?? []
-  const subpages = (await getSubpagesForPage(preview)) ?? []
+  // const subpages = (await getSubpagesForPage(preview)) ?? []
+  const subpages = [];
+  if(allPages.length > 0){
+    allPages = allPages.reverse();
+  }
   return {
     props: { preview, allPosts, allPages, header, subpages },
   }
