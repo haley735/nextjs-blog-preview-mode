@@ -68,6 +68,9 @@ module.exports = {
 
         'sm': {'max': '639px'},
         // => @media (max-width: 639px) { ... }
+      },
+      backgroundImage: {
+        'event-banner': "url('/images/parallax-02.jpg')",
       }
     },
   },
