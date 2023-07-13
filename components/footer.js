@@ -12,7 +12,7 @@ export default function Footer() {
           <h3 className="text-6xl lg:text-5xl text-white font-gotham-bold tracking-3 text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2">
             Alumni Association
           </h3>
-          <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2 ml-8">
+          <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
             <div className="flex flex-row">
               {/* <!-- Facebook --> */}
               <div className="ml-8 mr-8">
@@ -47,7 +47,7 @@ export default function Footer() {
                   {/* <!-- Youtube --> */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="h-8 w-14"
+                    className="h-8 w-14"
                     fill="white"
                     viewBox="0 0 24 24">
                     <path
@@ -61,7 +61,7 @@ export default function Footer() {
                   {/* <!-- Twitter --> */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="h-8 w-14"
+                    className="h-8 w-14"
                     fill="white"
                     viewBox="0 0 24 24">
                     <path

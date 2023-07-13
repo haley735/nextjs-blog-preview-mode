@@ -19,21 +19,21 @@ export default function Header({pages, subpages, headerMedia}) {
   return (
     <>
     <nav aria-label="primary" className="bg-crimson sticky w-full top-0 left-0">
-      <div className="max-w-screen-xl flex flex-row items-center mx-auto p-4">
+      <div className="max-w-screen-xl flex flex-row md:flex-col items-center mx-auto p-4">
         <a href="/" className="flex items-center ">
           <img src={logo && logo} className="h-24 w-48 mr-6 ml-28" alt="Alumni Logo"></img>
         </a>
-        <div className="flex order-2">
+        <div className="flex md:flex-wrap order-2 lg:mr-24">
             <button type="button" className="ml-4 mr-14 text-crimson bg-white hover:bg-lightgrey focus:ring-4 focus:outline-none focus:ring-blue-300 font-gotham-light rounded-lg text-md px-4 py-2 text-center ">Give Back</button>
         </div>
-        <div className="flex flex-col items-center h-24 justify-between w-auto md:flex md:w-auto order-1" id="navbar-sticky">  
+        <div className="flex grow flex-col items-center h-24 justify-between w-auto hidden md:flex lg:flex xl:flex 2xl:flex  md:w-auto order-1" id="navbar-sticky">  
         {/* id="navbar-sticky"> */}
-          <ul className="flex py-8 md:p-0 font-medium md:flex-row md:space-x-8 md:mt-0">
+          <ul className="flex space-between py-8 md:p-0 font-medium md:flex-row md:space-x-8 md:mt-0">
             {pages && pages.map((page, index) => {
                 return (
                 <React.Fragment key={'menu-item-' + index}>
                   <div key={'relative-group-' + index} className="relative group">
-                  <button key={'page-'+ page.title + '-' + index} className="block lg:inline-block lg:mt-0 text-white font-gotham-light hover:text-lightgrey ml-2 mr-4"><Link href={'/' + page.slug}>{page.title}</Link></button>
+                  <button key={'page-'+ page.title + '-' + index} className="block w-auto lg:inline-block lg:mt-0 text-white font-gotham-light hover:text-lightgrey ml-2 mr-4"><Link href={'/' + page.slug}>{page.title}</Link></button>
                   {subpages && subpages.length > 0 && (
                     <div key={'submenu-' + page.title + '-' + index} className="z-10 hidden bg-white rounded-lg shadow w-44 group-hover:block"> 
                       {subpages.map((subpage, index) => {
