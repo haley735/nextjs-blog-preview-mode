@@ -9,11 +9,11 @@ export default function Footer() {
           <h2 className="text-white font-gotham-light text-3xl">
             New Mexico State University 
           </h2>
-          <h3 className="text-6xl lg:text-5xl text-white font-gotham-bold tracking-3 text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2">
+          <h3 className="text-5xl text-white font-gotham-bold tracking-3 text-center min-w-screen-md">
             Alumni Association
           </h3>
-          <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
-            <div className="flex flex-row">
+          <div className="flex flex-row sm:flex-col justify-center items-center lg:pl-4 lg:w-1/2">
+            <div className="flex md:flex-col flex-row">
               {/* <!-- Facebook --> */}
               <div className="ml-8 mr-8">
                 <button className='rounded-full bg-crimson border-4 border-solid border-white h-16 w-16'>

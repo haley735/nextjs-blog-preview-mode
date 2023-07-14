@@ -63,12 +63,30 @@ module.exports = {
         'lg': {'max': '1023px'},
         // => @media (max-width: 1023px) { ... }
       
+        'lg-md': {'max': '1022px'},
+        // => @media (max-width: 1022px) { ... }
+
         'md': {'max': '767px'},
         // => @media (max-width: 767px) { ... }
 
         'sm': {'max': '639px'},
         // => @media (max-width: 639px) { ... }
       },
+        // 'sm': '640px',
+        // // => @media (min-width: 640px) { ... }
+
+        // 'md': '768px',
+        // // => @media (min-width: 768px) { ... }
+
+        // 'lg': '1024px',
+        // // => @media (min-width: 1024px) { ... }
+
+        // 'xl': '1280px',
+        // // => @media (min-width: 1280px) { ... }
+
+        // '2xl': '1536px',
+        // // => @media (min-width: 1536px) { ... }
+      // },
       backgroundImage: {
         'event-banner': "url('/images/parallax-02.jpg')",
       }

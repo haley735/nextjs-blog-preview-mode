@@ -16,6 +16,7 @@ export default function Header({pages, subpages, headerMedia}) {
   const headerImg = headerMedia && headerMedia[0]?.headerImg?.url;
   const headerVideo = headerMedia && headerMedia[0]?.headerVideo?.url;
   // TODO: fix subpages being matched up to correct page
+  console.log(pages);
   return (
     <>
     <nav aria-label="primary" className="bg-crimson sticky w-full top-0 left-0">
@@ -26,9 +27,8 @@ export default function Header({pages, subpages, headerMedia}) {
         <div className="flex md:flex-wrap order-2 lg:mr-24">
             <button type="button" className="ml-4 mr-14 text-crimson bg-white hover:bg-lightgrey focus:ring-4 focus:outline-none focus:ring-blue-300 font-gotham-light rounded-lg text-md px-4 py-2 text-center ">Give Back</button>
         </div>
-        <div className="flex grow flex-col items-center h-24 justify-between w-auto hidden md:flex lg:flex xl:flex 2xl:flex  md:w-auto order-1" id="navbar-sticky">  
-        {/* id="navbar-sticky"> */}
-          <ul className="flex space-between py-8 md:p-0 font-medium md:flex-row md:space-x-8 md:mt-0">
+        <div className="flex grow flex-col items-center h-24 justify-between w-auto md:hidden flex lg:flex xl:flex 2xl:flex  md:w-auto order-1" id="navbar-sticky">  
+          <ul className="flex space-between py-8 md:p-0 font-medium md:flex-col md:space-x-8 md:mt-0">
             {pages && pages.map((page, index) => {
                 return (
                 <React.Fragment key={'menu-item-' + index}>

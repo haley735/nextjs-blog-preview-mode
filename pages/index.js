@@ -14,13 +14,14 @@ export default function Index({ preview, allPosts, allPages, subpages, header, e
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
   console.log('entered index');
+  console.log('pages: ', allPages);
   return (
     <>
       <Layout preview={preview} >
         {/* <Head>
           <title>{`Next.js Blog Example with ${CMS_NAME}`}</title>
         </Head> */}
-        <Header key='header-1' pages={allPages} headerMedia={header} subpages={subpages}/>
+        <Header pages={allPages} headerMedia={header} subpages={subpages}/>
         <Container>
           <Intro />
           {/* {heroPost && (
@@ -47,14 +48,14 @@ export default function Index({ preview, allPosts, allPages, subpages, header, e
 
 export async function getStaticProps({ preview = false }) {
   const allPosts = (await getAllPostsForHome(preview)) ?? []
-  let allPages = (await getAllPagesForHome(preview)) ?? []
+  const allPages = (await getAllPagesForHome(preview)) ?? []
   const header = (await getHeaderForSlug(preview)) ?? []
   // const subpages = (await getSubpagesForPage(preview)) ?? []
   const events = (await getPageEvents('home', preview)) ?? []
   const subpages = [];
-  if(allPages.length > 0){
-    allPages = allPages.reverse();
-  }
+  // if(allPages.length > 0){
+  //   allPages = allPages.reverse();
+  // }
   return {
     props: { preview, allPosts, allPages, header, subpages, events },
   }

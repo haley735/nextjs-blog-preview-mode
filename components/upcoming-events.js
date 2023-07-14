@@ -1,8 +1,8 @@
 import React from 'react';
+import Link from 'next/link';
 
 export default function UpcomingEvents({ events }) {
   const eventList = events.events.eventsCollection.items;
-
   function formatDateAndTime(field1, field2){
     const date = new Date(field1);
     const date2 = new Date(field2);
@@ -17,16 +17,18 @@ export default function UpcomingEvents({ events }) {
   return (
   <>
   {/* for adding an image and then overlaying a color on top of it, have the image url in tailwind config and then put:  bg-crimson bg-blend-overlay */}
-  <div className='bg-event-banner  w-full'>
-    <h3 className="text-white font-gotham-black text-5xl"> Upcoming Events</h3>
-    <div className="flex flex-wrap">
-      <div className="flex flex-row w-max">
+  <div className='container bg-event-banner w-full h-max'>
+    <div className="mx-24 p-20 md:mx-12 md:p-12">
+     <h3 className="text-white font-gotham-black text-5xl "> Upcoming Events</h3>
+    </div>
+    <div className="flex flex-row mr-20 lg:mr-40  justify-end">
+      <div className="flex flex-row lg-md:flex-col w-max ">
           {eventList &&
             eventList.map((event, index) => {
               const [month, day, startTime, endTime] = formatDateAndTime(event.eventStartDate, event.eventEndDate);
               return (
                 <React.Fragment key={index}>
-                  <div className="flex flex-col w-max h-80 items-center">
+                  <div className="flex flex-col w-max max-h-fit items-center">
 
                     <h3 key={'month-' + index} className="flex text-white font-gotham-medium text-xl text-center mb-0">
                       {month}
@@ -35,7 +37,7 @@ export default function UpcomingEvents({ events }) {
                       {day}
                     </h4>
                   </div>
-                  <div className="flex flex-col">
+                  <div className="flex flex-col ml-8">
                      <h2 className="text-white font-gotham-medium text-lg w-max">{event.eventName}</h2>
                      <div className="flex flex-row">
                        <svg
@@ -64,7 +66,7 @@ export default function UpcomingEvents({ events }) {
 
                      </div>
                    </div>
-                   {index != 2 && <div className="inline-block h-16 min-h-[1em] w-0.5 self-stretch bg-white opacity-100 "></div>}
+                   {index != 2 && <div className="inline-block lg:h-16 min-h-[1em] w-0.5 self-stretch bg-white opacity-100 ml-8 mr-8"></div>}
                    
                   </React.Fragment>
               );
@@ -74,8 +76,15 @@ export default function UpcomingEvents({ events }) {
       
 
     </div>
-    
+    <div className='flex flex-row align-right mx-24 p-12'>
+        <div className="flex flex-col w-full content-end">
+          <Link href='/events' className="text-2xl text-white font-gotham-medium text-right">More Events {'>'} </Link>
+          <br></br>
+          <Link href='/events' className="text-2xl text-white font-gotham-medium text-right"> See Photos from Past Events {'>'} </Link>
+        </div>
+    </div>
   </div>
+  
   
   
     {/* <iframe 
