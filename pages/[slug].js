@@ -75,7 +75,6 @@ export async function getStaticProps({ params, preview = false }) {
 export async function getStaticPaths() {
   const allPages = await getAllPagesForHome()
   return {
-    allPages: allPages,
     paths: allPages?.map(({ slug }) => `/${slug}`) ?? [],
     fallback: true,
   }
