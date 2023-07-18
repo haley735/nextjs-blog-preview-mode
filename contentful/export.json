@@ -12,7 +12,7 @@
         "id": "page",
         "type": "ContentType",
         "createdAt": "2023-06-23T16:17:57.526Z",
-        "updatedAt": "2023-07-13T14:24:37.884Z",
+        "updatedAt": "2023-07-14T17:14:16.311Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -20,8 +20,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 49,
-        "publishedAt": "2023-07-13T14:24:37.884Z",
+        "publishedVersion": 57,
+        "publishedAt": "2023-07-14T17:14:16.311Z",
         "firstPublishedAt": "2023-06-23T16:17:57.887Z",
         "createdBy": {
           "sys": {
@@ -37,8 +37,8 @@
             "id": "0M2OMilZGA0ZdWZQFpp2lI"
           }
         },
-        "publishedCounter": 25,
-        "version": 50,
+        "publishedCounter": 29,
+        "version": 58,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -85,7 +85,7 @@
           "validations": [
           ],
           "disabled": false,
-          "omitted": true,
+          "omitted": false,
           "items": {
             "type": "Symbol",
             "validations": [
@@ -107,6 +107,62 @@
             {
               "linkContentType": [
                 "textIntro"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "calendarEvents",
+          "name": "Calendar Events",
+          "type": "Link",
+          "localized": true,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "events"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": true,
+          "linkType": "Entry"
+        },
+        {
+          "id": "events",
+          "name": "Events",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "events"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "icons",
+          "name": "Icons",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "iconGroup"
               ]
             }
           ],
@@ -249,7 +305,34 @@
                 }
               }
             ],
+            "events": [
+              {
+                "sys": {
+                  "id": "Contentful:AggregateComponent",
+                  "type": "Link",
+                  "linkType": "Annotation"
+                }
+              }
+            ],
+            "icons": [
+              {
+                "sys": {
+                  "id": "Contentful:AggregateComponent",
+                  "type": "Link",
+                  "linkType": "Annotation"
+                }
+              }
+            ],
             "posts": [
+              {
+                "sys": {
+                  "id": "Contentful:AggregateComponent",
+                  "type": "Link",
+                  "linkType": "Annotation"
+                }
+              }
+            ],
+            "calendarEvents": [
               {
                 "sys": {
                   "id": "Contentful:AggregateComponent",
@@ -917,6 +1000,548 @@
           "omitted": false
         }
       ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhxfvpiwf9w0"
+          }
+        },
+        "id": "calendarEvents",
+        "type": "ContentType",
+        "createdAt": "2023-07-13T14:35:13.391Z",
+        "updatedAt": "2023-07-13T14:51:14.540Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2023-07-13T14:51:14.540Z",
+        "firstPublishedAt": "2023-07-13T14:35:13.700Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "publishedCounter": 6,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Calendar Events",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "event1Name",
+          "name": "Event 1 Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "event1",
+          "name": "Event 1 Start Date",
+          "type": "Date",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "event1EndDate",
+          "name": "Event 1 End Date",
+          "type": "Date",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "event1Location",
+          "name": "Event 1 Location",
+          "type": "Location",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "event1LocationName",
+          "name": "Event 1 Location Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "event2Name",
+          "name": "Event 2 Name",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "event2",
+          "name": "Event 2 Start Date",
+          "type": "Date",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "event2EndDate",
+          "name": "Event 2 End Date",
+          "type": "Date",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "event2Location",
+          "name": "Event 2 Location",
+          "type": "Location",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "event2LocationName",
+          "name": "Event 2 Location Name",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "event3Name",
+          "name": "Event 3 Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "event3",
+          "name": "Event 3 Start Date",
+          "type": "Date",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "event3EndDate",
+          "name": "Event 3 End Date",
+          "type": "Date",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "event3Location",
+          "name": "Event 3 Location",
+          "type": "Location",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "event3LocationName",
+          "name": "Event 3 Location Name",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhxfvpiwf9w0"
+          }
+        },
+        "id": "events",
+        "type": "ContentType",
+        "createdAt": "2023-07-13T14:55:04.270Z",
+        "updatedAt": "2023-07-13T15:03:52.519Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2023-07-13T15:03:52.519Z",
+        "firstPublishedAt": "2023-07-13T14:55:04.732Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        }
+      },
+      "displayField": "eventName",
+      "name": "Event",
+      "description": "",
+      "fields": [
+        {
+          "id": "eventName",
+          "name": "Event Name",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "eventStartDate",
+          "name": "Event Start Date",
+          "type": "Date",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "eventEndDate",
+          "name": "Event End Date",
+          "type": "Date",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "eventLocation",
+          "name": "Event Location",
+          "type": "Location",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "eventLocationName",
+          "name": "Event Location Name",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhxfvpiwf9w0"
+          }
+        },
+        "id": "iconsWithText",
+        "type": "ContentType",
+        "createdAt": "2023-07-14T17:10:01.953Z",
+        "updatedAt": "2023-07-14T17:10:02.301Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-07-14T17:10:02.301Z",
+        "firstPublishedAt": "2023-07-14T17:10:02.301Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Icon With Text",
+      "description": "circle icons w/image that can be arranged horizontally or vertically",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "body",
+          "name": "Body",
+          "type": "Text",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "iconImage",
+          "name": "Icon Image",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhxfvpiwf9w0"
+          }
+        },
+        "id": "iconGroup",
+        "type": "ContentType",
+        "createdAt": "2023-07-14T17:13:35.371Z",
+        "updatedAt": "2023-07-14T17:13:35.672Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-07-14T17:13:35.672Z",
+        "firstPublishedAt": "2023-07-14T17:13:35.672Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        }
+      },
+      "displayField": null,
+      "name": "Icon Group",
+      "description": "a group of multiple icon w/text to be arranged horizontally or vertically",
+      "fields": [
+        {
+          "id": "icons",
+          "name": "Icons",
+          "type": "Array",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "iconsWithText"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "orientation",
+          "name": "Orientation",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "size": {
+                "max": 1
+              },
+              "message": "Please only select 1 option"
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": [
+              {
+                "in": [
+                  "Horizontal",
+                  "Vertical"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "metadata": {
+        "annotations": {
+          "ContentTypeField": {
+            "icons": [
+              {
+                "sys": {
+                  "id": "Contentful:AggregateComponent",
+                  "type": "Link",
+                  "linkType": "Annotation"
+                }
+              }
+            ]
+          }
+        }
+      }
     }
   ],
   "tags": [
@@ -933,7 +1558,7 @@
             "linkType": "Space"
           }
         },
-        "version": 48,
+        "version": 56,
         "createdAt": "2023-06-23T16:17:58.020Z",
         "createdBy": {
           "sys": {
@@ -942,7 +1567,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2023-07-13T14:24:38.592Z",
+        "updatedAt": "2023-07-14T17:14:17.125Z",
         "updatedBy": {
           "sys": {
             "id": "0M2OMilZGA0ZdWZQFpp2lI",
@@ -986,6 +1611,21 @@
         },
         {
           "fieldId": "intro",
+          "widgetId": "entryCardEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "calendarEvents",
+          "widgetId": "entryCardEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "events",
+          "widgetId": "entryCardsEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "icons",
           "widgetId": "entryCardEditor",
           "widgetNamespace": "builtin"
         },
@@ -1036,6 +1676,15 @@
             },
             {
               "fieldId": "intro"
+            },
+            {
+              "fieldId": "calendarEvents"
+            },
+            {
+              "fieldId": "events"
+            },
+            {
+              "fieldId": "icons"
             }
           ],
           "groupId": "content"
@@ -1418,6 +2067,352 @@
           "widgetNamespace": "builtin"
         }
       ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "jhxfvpiwf9w0",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 12,
+        "createdAt": "2023-07-13T14:35:13.811Z",
+        "createdBy": {
+          "sys": {
+            "id": "0M2OMilZGA0ZdWZQFpp2lI",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-07-13T14:51:15.271Z",
+        "updatedBy": {
+          "sys": {
+            "id": "0M2OMilZGA0ZdWZQFpp2lI",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "calendarEvents",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "event1Name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "event1",
+          "settings": {
+            "ampm": "12",
+            "format": "timeZ"
+          },
+          "widgetId": "datePicker",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "event1EndDate",
+          "settings": {
+            "ampm": "12",
+            "format": "timeZ"
+          },
+          "widgetId": "datePicker",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "event1Location",
+          "widgetId": "locationEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "event1LocationName",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "event2Name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "event2",
+          "settings": {
+            "ampm": "12",
+            "format": "timeZ"
+          },
+          "widgetId": "datePicker",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "event2EndDate",
+          "settings": {
+            "ampm": "12",
+            "format": "timeZ"
+          },
+          "widgetId": "datePicker",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "event2Location",
+          "widgetId": "locationEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "event2LocationName",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "event3Name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "event3",
+          "settings": {
+            "ampm": "12",
+            "format": "timeZ"
+          },
+          "widgetId": "datePicker",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "event3EndDate",
+          "settings": {
+            "ampm": "12",
+            "format": "timeZ"
+          },
+          "widgetId": "datePicker",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "event3Location",
+          "widgetId": "locationEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "event3LocationName",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "jhxfvpiwf9w0",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 4,
+        "createdAt": "2023-07-13T14:55:04.883Z",
+        "createdBy": {
+          "sys": {
+            "id": "0M2OMilZGA0ZdWZQFpp2lI",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-07-13T15:03:53.375Z",
+        "updatedBy": {
+          "sys": {
+            "id": "0M2OMilZGA0ZdWZQFpp2lI",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "events",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "eventName",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "eventStartDate",
+          "settings": {
+            "ampm": "12",
+            "format": "timeZ"
+          },
+          "widgetId": "datePicker",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "eventEndDate",
+          "settings": {
+            "ampm": "12",
+            "format": "timeZ"
+          },
+          "widgetId": "datePicker",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "eventLocation",
+          "widgetId": "locationEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "eventLocationName",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "jhxfvpiwf9w0",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2023-07-14T17:10:02.424Z",
+        "createdBy": {
+          "sys": {
+            "id": "0M2OMilZGA0ZdWZQFpp2lI",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-07-14T17:10:03.057Z",
+        "updatedBy": {
+          "sys": {
+            "id": "0M2OMilZGA0ZdWZQFpp2lI",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "iconsWithText",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "body",
+          "widgetId": "multipleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "iconImage",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "jhxfvpiwf9w0",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2023-07-14T17:13:35.852Z",
+        "createdBy": {
+          "sys": {
+            "id": "0M2OMilZGA0ZdWZQFpp2lI",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-07-14T17:13:36.315Z",
+        "updatedBy": {
+          "sys": {
+            "id": "0M2OMilZGA0ZdWZQFpp2lI",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "iconGroup",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "icons",
+          "widgetId": "entryCardsEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "orientation",
+          "widgetId": "checkbox",
+          "widgetNamespace": "builtin"
+        }
+      ]
     }
   ],
   "entries": [
@@ -1437,7 +2432,7 @@
         "id": "oOR3EGifdV7kLZCUV3wPi",
         "type": "Entry",
         "createdAt": "2023-06-23T16:18:01.913Z",
-        "updatedAt": "2023-07-13T14:26:38.565Z",
+        "updatedAt": "2023-07-14T17:15:58.527Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1445,8 +2440,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 32,
-        "publishedAt": "2023-07-13T14:26:38.565Z",
+        "publishedVersion": 40,
+        "publishedAt": "2023-07-14T17:15:58.527Z",
         "firstPublishedAt": "2023-06-23T16:18:13.239Z",
         "createdBy": {
           "sys": {
@@ -1462,8 +2457,8 @@
             "id": "0M2OMilZGA0ZdWZQFpp2lI"
           }
         },
-        "publishedCounter": 11,
-        "version": 33,
+        "publishedCounter": 13,
+        "version": 41,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1499,6 +2494,40 @@
               "type": "Link",
               "linkType": "Entry",
               "id": "1W2H2C6gj5Ngx3k1vnVmIg"
+            }
+          }
+        },
+        "events": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5qmxVe3KiWX1JuYF0WQLjF"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3TV7fa0h1SqGretPccSG5U"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "52yB2RN9DlXSycjqmK8jN"
+              }
+            }
+          ]
+        },
+        "icons": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "65KBBa5HShtiMidxnJjjFo"
             }
           }
         },
@@ -2349,6 +3378,576 @@
                 ]
               }
             ]
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhxfvpiwf9w0"
+          }
+        },
+        "id": "5qmxVe3KiWX1JuYF0WQLjF",
+        "type": "Entry",
+        "createdAt": "2023-07-13T15:03:29.430Z",
+        "updatedAt": "2023-07-13T15:20:54.657Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 12,
+        "publishedAt": "2023-07-13T15:20:54.657Z",
+        "firstPublishedAt": "2023-07-13T15:20:54.657Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 13,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "events"
+          }
+        }
+      },
+      "fields": {
+        "eventName": {
+          "en-US": "Distinguished Alumni"
+        },
+        "eventStartDate": {
+          "en-US": "2023-11-03T18:00-06:00"
+        },
+        "eventEndDate": {
+          "en-US": "2023-11-03T21:00-06:00"
+        },
+        "eventLocation": {
+          "en-US": {
+            "lat": 32.29703,
+            "lon": -106.718
+          }
+        },
+        "eventLocationName": {
+          "en-US": "Farm & Ranch Heritage"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhxfvpiwf9w0"
+          }
+        },
+        "id": "3TV7fa0h1SqGretPccSG5U",
+        "type": "Entry",
+        "createdAt": "2023-07-13T15:05:26.804Z",
+        "updatedAt": "2023-07-14T14:30:22.692Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 16,
+        "publishedAt": "2023-07-14T14:30:22.692Z",
+        "firstPublishedAt": "2023-07-13T15:20:54.768Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 17,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "events"
+          }
+        }
+      },
+      "fields": {
+        "eventName": {
+          "en-US": "HOCO Tailgate"
+        },
+        "eventStartDate": {
+          "en-US": "2023-11-04T18:00-06:00"
+        },
+        "eventEndDate": {
+          "en-US": "2023-11-04T21:00-06:00"
+        },
+        "eventLocation": {
+          "en-US": {
+            "lon": -106.718,
+            "lat": 32.29703
+          }
+        },
+        "eventLocationName": {
+          "en-US": "Farm & Ranch Heritage"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhxfvpiwf9w0"
+          }
+        },
+        "id": "52yB2RN9DlXSycjqmK8jN",
+        "type": "Entry",
+        "createdAt": "2023-07-13T15:06:10.460Z",
+        "updatedAt": "2023-07-14T14:30:22.725Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 16,
+        "publishedAt": "2023-07-14T14:30:22.725Z",
+        "firstPublishedAt": "2023-07-13T15:20:54.786Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 17,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "events"
+          }
+        }
+      },
+      "fields": {
+        "eventName": {
+          "en-US": "Golden Aggies"
+        },
+        "eventStartDate": {
+          "en-US": "2023-11-05T18:00-06:00"
+        },
+        "eventEndDate": {
+          "en-US": "2023-11-05T21:00-06:00"
+        },
+        "eventLocation": {
+          "en-US": {
+            "lon": -106.718,
+            "lat": 32.29703
+          }
+        },
+        "eventLocationName": {
+          "en-US": "Farm & Ranch Heritage"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhxfvpiwf9w0"
+          }
+        },
+        "id": "65KBBa5HShtiMidxnJjjFo",
+        "type": "Entry",
+        "createdAt": "2023-07-14T17:14:34.308Z",
+        "updatedAt": "2023-07-14T17:15:58.580Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2023-07-14T17:15:58.580Z",
+        "firstPublishedAt": "2023-07-14T17:15:58.580Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "iconGroup"
+          }
+        }
+      },
+      "fields": {
+        "icons": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3KIfwBHcbhCMGeYwfI8Jeb"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "yZQpnek3q2BkNQOQvPKkJ"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "FrEnjEIdsJDIhBKv2dDJA"
+              }
+            }
+          ]
+        },
+        "orientation": {
+          "en-US": [
+            "Horizontal"
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhxfvpiwf9w0"
+          }
+        },
+        "id": "3KIfwBHcbhCMGeYwfI8Jeb",
+        "type": "Entry",
+        "createdAt": "2023-07-14T17:14:38.890Z",
+        "updatedAt": "2023-07-14T17:15:58.599Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2023-07-14T17:15:58.599Z",
+        "firstPublishedAt": "2023-07-14T17:15:58.599Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "iconsWithText"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Connect with us!"
+        },
+        "body": {
+          "en-US": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+        },
+        "iconImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "2J6swDF2B8RHz9kX4tUM9T"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhxfvpiwf9w0"
+          }
+        },
+        "id": "yZQpnek3q2BkNQOQvPKkJ",
+        "type": "Entry",
+        "createdAt": "2023-07-14T17:15:25.162Z",
+        "updatedAt": "2023-07-14T17:15:58.613Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2023-07-14T17:15:58.613Z",
+        "firstPublishedAt": "2023-07-14T17:15:58.613Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "iconsWithText"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Class Rings"
+        },
+        "body": {
+          "en-US": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+        },
+        "iconImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "2J6swDF2B8RHz9kX4tUM9T"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhxfvpiwf9w0"
+          }
+        },
+        "id": "FrEnjEIdsJDIhBKv2dDJA",
+        "type": "Entry",
+        "createdAt": "2023-07-14T17:15:40.610Z",
+        "updatedAt": "2023-07-14T17:15:58.632Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2023-07-14T17:15:58.632Z",
+        "firstPublishedAt": "2023-07-14T17:15:58.632Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "iconsWithText"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Homecoming & Tailgates"
+        },
+        "body": {
+          "en-US": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+        },
+        "iconImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "2J6swDF2B8RHz9kX4tUM9T"
+            }
           }
         }
       }

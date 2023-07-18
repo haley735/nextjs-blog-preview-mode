@@ -27,12 +27,16 @@ module.exports = {
         cyan: '#79FFE1',
         crimson: '#8C0B42',
         lightgrey: '#D3D3D3',
+        lightergrey: '#F5F5F5'
       },
       spacing: {
         28: '7rem',
       },
       letterSpacing: {
         tighter: '-.04em',
+      },
+      height: {
+        largeImage: '42rem',
       },
       lineHeight: {
         tight: 1.2,

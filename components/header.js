@@ -16,7 +16,6 @@ export default function Header({pages, subpages, headerMedia}) {
   const headerImg = headerMedia && headerMedia[0]?.headerImg?.url;
   const headerVideo = headerMedia && headerMedia[0]?.headerVideo?.url;
   // TODO: fix subpages being matched up to correct page
-  console.log(pages);
   return (
     <>
     <nav aria-label="primary" className="bg-crimson sticky w-full top-0 left-0">
@@ -30,10 +29,17 @@ export default function Header({pages, subpages, headerMedia}) {
         <div className="flex grow flex-col items-center h-24 justify-between w-auto md:hidden flex lg:flex xl:flex 2xl:flex  md:w-auto order-1" id="navbar-sticky">  
           <ul className="flex space-between py-8 md:p-0 font-medium md:flex-col md:space-x-8 md:mt-0">
             {pages && pages.map((page, index) => {
+                let path;
+                if(page.slug == 'home'){
+                  path = '/';
+                }
+                else{
+                  path = `/${page.slug}`;
+                }
                 return (
                 <React.Fragment key={'menu-item-' + index}>
                   <div key={'relative-group-' + index} className="relative group">
-                  <button key={'page-'+ page.title + '-' + index} className="block w-auto lg:inline-block lg:mt-0 text-white font-gotham-light hover:text-lightgrey ml-2 mr-4"><Link href={'/' + page.slug}>{page.title}</Link></button>
+                  <button key={'page-'+ page.title + '-' + index} className="block w-auto lg:inline-block lg:mt-0 text-white font-gotham-light hover:text-lightgrey ml-2 mr-4"><Link href={path}>{page.title}</Link></button>
                   {subpages && subpages.length > 0 && (
                     <div key={'submenu-' + page.title + '-' + index} className="z-10 hidden bg-white rounded-lg shadow w-44 group-hover:block"> 
                       {subpages.map((subpage, index) => {

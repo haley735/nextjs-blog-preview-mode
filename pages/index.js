@@ -4,17 +4,26 @@ import HeroPost from '../components/hero-post'
 import Intro from '../components/intro'
 import Layout from '../components/layout'
 import Header from '../components/header'
-import { getAllPagesForHome, getAllPostsForHome, getHeaderForSlug, getSubpagesForPage, getPageEvents } from '../lib/api'
+import { getAllPagesForHome, 
+  getAllPostsForHome, 
+  getHeaderForSlug, 
+  getSubpagesForPage, 
+  getPageEvents, 
+  getTextIntroForPage,
+  getHorizontalIconsForPage, 
+  getVerticalIconsForPage,
+  getGallery} from '../lib/api'
 import Head from 'next/head'
-import { CMS_NAME } from '../lib/constants'
 import Divider from '../components/divider'
 import UpcomingEvents from '../components/upcoming-events'
+import HorizontalIcons from '../components/horizontal-icons'
+import VerticalIcons from '../components/vertical-icons'
+import MediaGallery from '../components/gallery'
 
-export default function Index({ preview, allPosts, allPages, subpages, header, events }) {
-  const heroPost = allPosts[0];
-  const morePosts = allPosts.slice(1);
-  console.log('entered index');
-  console.log('pages: ', allPages);
+export default function Index({ preview, allPages, subpages, header, events, textIntros, horizontalIconGroups, verticalIconGroups, gallery }) {
+  // const heroPost = allPosts[0];
+  // const morePosts = allPosts.slice(1);
+  console.log('gallery: ', gallery);
   return (
     <>
       <Layout preview={preview} >
@@ -23,7 +32,12 @@ export default function Index({ preview, allPosts, allPages, subpages, header, e
         </Head> */}
         <Header pages={allPages} headerMedia={header} subpages={subpages}/>
         <Container>
-          <Intro />
+          <Intro intros={textIntros}/>
+          <Divider options={{'marginBottom': true}}></Divider>
+          {horizontalIconGroups &&
+            <HorizontalIcons icons={horizontalIconGroups}/>
+
+          }
           {/* {heroPost && (
             <HeroPost
               title={heroPost.title}
@@ -34,13 +48,21 @@ export default function Index({ preview, allPosts, allPages, subpages, header, e
               excerpt={heroPost.excerpt}
             />
           )} */}
-          <Divider></Divider>
+          {/* <Divider></Divider> */}
           
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          {/* {morePosts.length > 0 && <MoreStories posts={morePosts} />} */}
         </Container>
         {events && (
             <UpcomingEvents events={events}/>
           )}
+        {verticalIconGroups &&
+          <VerticalIcons icons={verticalIconGroups}/>
+        }
+        {gallery && 
+          <MediaGallery images={gallery}/>
+
+        }
+
       </Layout>
     </>
   )
@@ -52,11 +74,16 @@ export async function getStaticProps({ preview = false }) {
   const header = (await getHeaderForSlug(preview)) ?? []
   // const subpages = (await getSubpagesForPage(preview)) ?? []
   const events = (await getPageEvents('home', preview)) ?? []
+  const textIntros = (await getTextIntroForPage('home', preview)) ?? []
+  const horizontalIconGroups = (await getHorizontalIconsForPage('home', preview)) ?? []
+  const verticalIconGroups = (await getVerticalIconsForPage('home', preview)) ?? []
+  const gallery = (await getGallery(preview)) ?? []
+  console.log('h-icons: ', horizontalIconGroups);
   const subpages = [];
   // if(allPages.length > 0){
   //   allPages = allPages.reverse();
   // }
   return {
-    props: { preview, allPosts, allPages, header, subpages, events },
+    props: { preview, allPages, header, subpages, events, textIntros, horizontalIconGroups, verticalIconGroups, gallery },
   }
 }

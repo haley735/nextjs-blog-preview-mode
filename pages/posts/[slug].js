@@ -12,7 +12,7 @@ import { getAllPostsWithSlug, getPostAndMorePosts, getHeaderForSlug } from '../.
 import PostTitle from '../../components/post-title'
 import { CMS_NAME } from '../../lib/constants'
 
-export default function Post({ post, morePosts, preview, header }) {
+export default function Post({ post, morePosts, preview, allPages, header }) {
   const router = useRouter();
 
   if (!router.isFallback && !post) {
@@ -22,7 +22,7 @@ export default function Post({ post, morePosts, preview, header }) {
   return (
     <Layout preview={preview}>
       <Container>
-        <Header headerMedia={header}/>
+        <Header pages={allPages} headerMedia={header}/>
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
         ) : (
@@ -55,12 +55,14 @@ export default function Post({ post, morePosts, preview, header }) {
 
 export async function getStaticProps({ params, preview = false }) {
   const data = await getPostAndMorePosts(params.slug, preview)
+  const allPages = (await getAllPagesForHome(preview)) ?? []
   const header = (await getHeaderForSlug(preview)) ?? []
   return {
     props: {
       preview,
       post: data?.post ?? null,
       morePosts: data?.morePosts ?? null,
+      allPages: allPages,
       header: header,
     },
   }
