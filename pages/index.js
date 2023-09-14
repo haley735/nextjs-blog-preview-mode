@@ -18,7 +18,7 @@ import Divider from '../components/divider'
 import UpcomingEvents from '../components/upcoming-events'
 import HorizontalIcons from '../components/horizontal-icons'
 import VerticalIcons from '../components/vertical-icons'
-import MediaGallery from '../components/gallery'
+import MediaGallery from '../components/media-gallery'
 
 export default function Index({ preview, allPages, subpages, header, events, textIntros, horizontalIconGroups, verticalIconGroups, gallery }) {
   // const heroPost = allPosts[0];

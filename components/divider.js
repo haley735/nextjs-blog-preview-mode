@@ -5,6 +5,6 @@ export default function Divider({options}) {
   // console.log('margin options: ', marginBottom);
   
   return(
-    <hr className={"mx-96 h-7 border-t-0 rounded-full bg-crimson opacity-100" + marginOptions + moveUp}/> 
+    <hr className={`mx-96 h-7 border-t-0 rounded-full bg-crimson opacity-100 ${marginOptions} ${moveUp}`}/> 
   )
 }

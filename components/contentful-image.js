@@ -1,4 +1,5 @@
-import Image from 'next/image'
+// import Image from 'next/image'
+import Image from "next/legacy/image";
 
 const contentfulLoader = ({ src, width, quality }) => {
   return `${src}?w=${width}&q=${quality || 75}`
