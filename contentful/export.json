@@ -12,7 +12,7 @@
         "id": "page",
         "type": "ContentType",
         "createdAt": "2023-06-23T16:17:57.526Z",
-        "updatedAt": "2023-07-14T17:14:16.311Z",
+        "updatedAt": "2023-07-17T14:33:40.501Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -20,8 +20,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 57,
-        "publishedAt": "2023-07-14T17:14:16.311Z",
+        "publishedVersion": 73,
+        "publishedAt": "2023-07-17T14:33:40.501Z",
         "firstPublishedAt": "2023-06-23T16:17:57.887Z",
         "createdBy": {
           "sys": {
@@ -37,8 +37,8 @@
             "id": "0M2OMilZGA0ZdWZQFpp2lI"
           }
         },
-        "publishedCounter": 29,
-        "version": 58,
+        "publishedCounter": 37,
+        "version": 74,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -115,23 +115,6 @@
           "linkType": "Entry"
         },
         {
-          "id": "calendarEvents",
-          "name": "Calendar Events",
-          "type": "Link",
-          "localized": true,
-          "required": false,
-          "validations": [
-            {
-              "linkContentType": [
-                "events"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": true,
-          "linkType": "Entry"
-        },
-        {
           "id": "events",
           "name": "Events",
           "type": "Array",
@@ -154,15 +137,49 @@
           }
         },
         {
-          "id": "icons",
-          "name": "Icons",
+          "id": "horizontalIcons",
+          "name": "Horizontal Icons",
           "type": "Link",
-          "localized": false,
+          "localized": true,
           "required": false,
           "validations": [
             {
               "linkContentType": [
-                "iconGroup"
+                "horizontalIconGroup"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "verticalIcons",
+          "name": "Vertical Icons",
+          "type": "Link",
+          "localized": true,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "verticalIconGroup"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "gallery",
+          "name": "Gallery",
+          "type": "Link",
+          "localized": true,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "gallery"
               ]
             }
           ],
@@ -287,6 +304,15 @@
             }
           ],
           "ContentTypeField": {
+            "verticalIcons": [
+              {
+                "sys": {
+                  "id": "Contentful:AggregateComponent",
+                  "type": "Link",
+                  "linkType": "Annotation"
+                }
+              }
+            ],
             "subpages": [
               {
                 "sys": {
@@ -314,7 +340,16 @@
                 }
               }
             ],
-            "icons": [
+            "horizontalIcons": [
+              {
+                "sys": {
+                  "id": "Contentful:AggregateComponent",
+                  "type": "Link",
+                  "linkType": "Annotation"
+                }
+              }
+            ],
+            "gallery": [
               {
                 "sys": {
                   "id": "Contentful:AggregateComponent",
@@ -324,15 +359,6 @@
               }
             ],
             "posts": [
-              {
-                "sys": {
-                  "id": "Contentful:AggregateComponent",
-                  "type": "Link",
-                  "linkType": "Annotation"
-                }
-              }
-            ],
-            "calendarEvents": [
               {
                 "sys": {
                   "id": "Contentful:AggregateComponent",
@@ -1010,235 +1036,6 @@
             "id": "jhxfvpiwf9w0"
           }
         },
-        "id": "calendarEvents",
-        "type": "ContentType",
-        "createdAt": "2023-07-13T14:35:13.391Z",
-        "updatedAt": "2023-07-13T14:51:14.540Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 11,
-        "publishedAt": "2023-07-13T14:51:14.540Z",
-        "firstPublishedAt": "2023-07-13T14:35:13.700Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "0M2OMilZGA0ZdWZQFpp2lI"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "0M2OMilZGA0ZdWZQFpp2lI"
-          }
-        },
-        "publishedCounter": 6,
-        "version": 12,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "0M2OMilZGA0ZdWZQFpp2lI"
-          }
-        }
-      },
-      "displayField": "title",
-      "name": "Calendar Events",
-      "description": "",
-      "fields": [
-        {
-          "id": "title",
-          "name": "Title",
-          "type": "Symbol",
-          "localized": true,
-          "required": true,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "event1Name",
-          "name": "Event 1 Name",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "event1",
-          "name": "Event 1 Start Date",
-          "type": "Date",
-          "localized": true,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "event1EndDate",
-          "name": "Event 1 End Date",
-          "type": "Date",
-          "localized": true,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "event1Location",
-          "name": "Event 1 Location",
-          "type": "Location",
-          "localized": true,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "event1LocationName",
-          "name": "Event 1 Location Name",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "event2Name",
-          "name": "Event 2 Name",
-          "type": "Symbol",
-          "localized": true,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "event2",
-          "name": "Event 2 Start Date",
-          "type": "Date",
-          "localized": true,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "event2EndDate",
-          "name": "Event 2 End Date",
-          "type": "Date",
-          "localized": true,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "event2Location",
-          "name": "Event 2 Location",
-          "type": "Location",
-          "localized": true,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "event2LocationName",
-          "name": "Event 2 Location Name",
-          "type": "Symbol",
-          "localized": true,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "event3Name",
-          "name": "Event 3 Name",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "event3",
-          "name": "Event 3 Start Date",
-          "type": "Date",
-          "localized": true,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "event3EndDate",
-          "name": "Event 3 End Date",
-          "type": "Date",
-          "localized": true,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "event3Location",
-          "name": "Event 3 Location",
-          "type": "Location",
-          "localized": true,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "event3LocationName",
-          "name": "Event 3 Location Name",
-          "type": "Symbol",
-          "localized": true,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        }
-      ]
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "jhxfvpiwf9w0"
-          }
-        },
         "id": "events",
         "type": "ContentType",
         "createdAt": "2023-07-13T14:55:04.270Z",
@@ -1434,10 +1231,328 @@
             "id": "jhxfvpiwf9w0"
           }
         },
-        "id": "iconGroup",
+        "id": "verticalIconGroup",
         "type": "ContentType",
-        "createdAt": "2023-07-14T17:13:35.371Z",
-        "updatedAt": "2023-07-14T17:13:35.672Z",
+        "createdAt": "2023-07-17T14:06:42.130Z",
+        "updatedAt": "2023-07-17T15:23:47.329Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2023-07-17T15:23:47.329Z",
+        "firstPublishedAt": "2023-07-17T14:06:42.480Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Vertical Icon Group",
+      "description": "block that can contain a title, icons w/text, and a photo on the left or right",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "displayTitle",
+          "name": "Display Title",
+          "type": "Boolean",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "photoLocation",
+          "name": "Photo Location",
+          "type": "Array",
+          "localized": true,
+          "required": false,
+          "validations": [
+            {
+              "size": {
+                "min": 1,
+                "max": 1
+              },
+              "message": "Please only select 1 option"
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": [
+              {
+                "in": [
+                  "Left",
+                  "Right"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "photo",
+          "name": "Photo",
+          "type": "Link",
+          "localized": true,
+          "required": false,
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "image",
+                "pdfdocument"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "icons",
+          "name": "Icons",
+          "type": "Array",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "iconsWithText"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ],
+      "metadata": {
+        "annotations": {
+          "ContentTypeField": {
+            "icons": [
+              {
+                "sys": {
+                  "id": "Contentful:AggregateComponent",
+                  "type": "Link",
+                  "linkType": "Annotation"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhxfvpiwf9w0"
+          }
+        },
+        "id": "horizontalIconGroup",
+        "type": "ContentType",
+        "createdAt": "2023-07-17T14:07:24.310Z",
+        "updatedAt": "2023-07-17T15:23:28.593Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2023-07-17T15:23:28.593Z",
+        "firstPublishedAt": "2023-07-17T14:07:24.640Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Horizontal Icon Group",
+      "description": "block that can contain a title, icons w/text, and a photo above or below",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "displayTitle",
+          "name": "Display Title",
+          "type": "Boolean",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "photoLocation",
+          "name": "Photo Location",
+          "type": "Array",
+          "localized": true,
+          "required": false,
+          "validations": [
+            {
+              "size": {
+                "min": 1,
+                "max": 1
+              },
+              "message": "Please only select 1 option"
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": [
+              {
+                "in": [
+                  "Above",
+                  "Below"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "photo",
+          "name": "Photo",
+          "type": "Link",
+          "localized": true,
+          "required": false,
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "image",
+                "pdfdocument"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "icons",
+          "name": "Icons",
+          "type": "Array",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "iconsWithText"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ],
+      "metadata": {
+        "annotations": {
+          "ContentTypeField": {
+            "icons": [
+              {
+                "sys": {
+                  "id": "Contentful:AggregateComponent",
+                  "type": "Link",
+                  "linkType": "Annotation"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhxfvpiwf9w0"
+          }
+        },
+        "id": "gallery",
+        "type": "ContentType",
+        "createdAt": "2023-07-17T14:33:06.518Z",
+        "updatedAt": "2023-07-17T14:33:06.888Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1446,8 +1561,8 @@
           }
         },
         "publishedVersion": 1,
-        "publishedAt": "2023-07-14T17:13:35.672Z",
-        "firstPublishedAt": "2023-07-14T17:13:35.672Z",
+        "publishedAt": "2023-07-17T14:33:06.888Z",
+        "firstPublishedAt": "2023-07-17T14:33:06.888Z",
         "createdBy": {
           "sys": {
             "type": "Link",
@@ -1472,16 +1587,27 @@
           }
         }
       },
-      "displayField": null,
-      "name": "Icon Group",
-      "description": "a group of multiple icon w/text to be arranged horizontally or vertically",
+      "displayField": "title",
+      "name": "Gallery",
+      "description": "",
       "fields": [
         {
-          "id": "icons",
-          "name": "Icons",
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "photos",
+          "name": "Photos",
           "type": "Array",
           "localized": true,
-          "required": false,
+          "required": true,
           "validations": [
           ],
           "disabled": false,
@@ -1490,58 +1616,16 @@
             "type": "Link",
             "validations": [
               {
-                "linkContentType": [
-                  "iconsWithText"
+                "linkMimetypeGroup": [
+                  "image",
+                  "pdfdocument"
                 ]
               }
             ],
-            "linkType": "Entry"
-          }
-        },
-        {
-          "id": "orientation",
-          "name": "Orientation",
-          "type": "Array",
-          "localized": false,
-          "required": true,
-          "validations": [
-            {
-              "size": {
-                "max": 1
-              },
-              "message": "Please only select 1 option"
-            }
-          ],
-          "disabled": false,
-          "omitted": false,
-          "items": {
-            "type": "Symbol",
-            "validations": [
-              {
-                "in": [
-                  "Horizontal",
-                  "Vertical"
-                ]
-              }
-            ]
+            "linkType": "Asset"
           }
         }
-      ],
-      "metadata": {
-        "annotations": {
-          "ContentTypeField": {
-            "icons": [
-              {
-                "sys": {
-                  "id": "Contentful:AggregateComponent",
-                  "type": "Link",
-                  "linkType": "Annotation"
-                }
-              }
-            ]
-          }
-        }
-      }
+      ]
     }
   ],
   "tags": [
@@ -1558,7 +1642,7 @@
             "linkType": "Space"
           }
         },
-        "version": 56,
+        "version": 72,
         "createdAt": "2023-06-23T16:17:58.020Z",
         "createdBy": {
           "sys": {
@@ -1567,7 +1651,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2023-07-14T17:14:17.125Z",
+        "updatedAt": "2023-07-17T14:33:41.316Z",
         "updatedBy": {
           "sys": {
             "id": "0M2OMilZGA0ZdWZQFpp2lI",
@@ -1615,17 +1699,22 @@
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "calendarEvents",
-          "widgetId": "entryCardEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
           "fieldId": "events",
           "widgetId": "entryCardsEditor",
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "icons",
+          "fieldId": "horizontalIcons",
+          "widgetId": "entryCardEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "verticalIcons",
+          "widgetId": "entryCardEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "gallery",
           "widgetId": "entryCardEditor",
           "widgetNamespace": "builtin"
         },
@@ -1678,13 +1767,16 @@
               "fieldId": "intro"
             },
             {
-              "fieldId": "calendarEvents"
-            },
-            {
               "fieldId": "events"
             },
             {
-              "fieldId": "icons"
+              "fieldId": "verticalIcons"
+            },
+            {
+              "fieldId": "horizontalIcons"
+            },
+            {
+              "fieldId": "gallery"
             }
           ],
           "groupId": "content"
@@ -2079,156 +2171,6 @@
             "linkType": "Space"
           }
         },
-        "version": 12,
-        "createdAt": "2023-07-13T14:35:13.811Z",
-        "createdBy": {
-          "sys": {
-            "id": "0M2OMilZGA0ZdWZQFpp2lI",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2023-07-13T14:51:15.271Z",
-        "updatedBy": {
-          "sys": {
-            "id": "0M2OMilZGA0ZdWZQFpp2lI",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "contentType": {
-          "sys": {
-            "id": "calendarEvents",
-            "type": "Link",
-            "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        }
-      },
-      "controls": [
-        {
-          "fieldId": "title",
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "event1Name",
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "event1",
-          "settings": {
-            "ampm": "12",
-            "format": "timeZ"
-          },
-          "widgetId": "datePicker",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "event1EndDate",
-          "settings": {
-            "ampm": "12",
-            "format": "timeZ"
-          },
-          "widgetId": "datePicker",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "event1Location",
-          "widgetId": "locationEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "event1LocationName",
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "event2Name",
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "event2",
-          "settings": {
-            "ampm": "12",
-            "format": "timeZ"
-          },
-          "widgetId": "datePicker",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "event2EndDate",
-          "settings": {
-            "ampm": "12",
-            "format": "timeZ"
-          },
-          "widgetId": "datePicker",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "event2Location",
-          "widgetId": "locationEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "event2LocationName",
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "event3Name",
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "event3",
-          "settings": {
-            "ampm": "12",
-            "format": "timeZ"
-          },
-          "widgetId": "datePicker",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "event3EndDate",
-          "settings": {
-            "ampm": "12",
-            "format": "timeZ"
-          },
-          "widgetId": "datePicker",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "event3Location",
-          "widgetId": "locationEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "event3LocationName",
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "default",
-        "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "jhxfvpiwf9w0",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
         "version": 4,
         "createdAt": "2023-07-13T14:55:04.883Z",
         "createdBy": {
@@ -2369,8 +2311,8 @@
             "linkType": "Space"
           }
         },
-        "version": 2,
-        "createdAt": "2023-07-14T17:13:35.852Z",
+        "version": 4,
+        "createdAt": "2023-07-17T14:06:42.688Z",
         "createdBy": {
           "sys": {
             "id": "0M2OMilZGA0ZdWZQFpp2lI",
@@ -2378,7 +2320,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2023-07-14T17:13:36.315Z",
+        "updatedAt": "2023-07-17T15:23:48.018Z",
         "updatedBy": {
           "sys": {
             "id": "0M2OMilZGA0ZdWZQFpp2lI",
@@ -2388,7 +2330,7 @@
         },
         "contentType": {
           "sys": {
-            "id": "iconGroup",
+            "id": "verticalIconGroup",
             "type": "Link",
             "linkType": "ContentType"
           }
@@ -2403,13 +2345,155 @@
       },
       "controls": [
         {
-          "fieldId": "icons",
-          "widgetId": "entryCardsEditor",
+          "fieldId": "title",
+          "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "orientation",
+          "fieldId": "displayTitle",
+          "widgetId": "boolean",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "photoLocation",
           "widgetId": "checkbox",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "photo",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "icons",
+          "widgetId": "entryCardsEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "jhxfvpiwf9w0",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2023-07-17T14:07:24.826Z",
+        "createdBy": {
+          "sys": {
+            "id": "0M2OMilZGA0ZdWZQFpp2lI",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-07-17T15:23:29.180Z",
+        "updatedBy": {
+          "sys": {
+            "id": "0M2OMilZGA0ZdWZQFpp2lI",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "horizontalIconGroup",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "displayTitle",
+          "widgetId": "boolean",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "photoLocation",
+          "widgetId": "checkbox",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "photo",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "icons",
+          "widgetId": "entryCardsEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "jhxfvpiwf9w0",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2023-07-17T14:33:07.047Z",
+        "createdBy": {
+          "sys": {
+            "id": "0M2OMilZGA0ZdWZQFpp2lI",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-07-17T14:33:07.973Z",
+        "updatedBy": {
+          "sys": {
+            "id": "0M2OMilZGA0ZdWZQFpp2lI",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "gallery",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "photos",
+          "widgetId": "assetGalleryEditor",
           "widgetNamespace": "builtin"
         }
       ]
@@ -2432,7 +2516,7 @@
         "id": "oOR3EGifdV7kLZCUV3wPi",
         "type": "Entry",
         "createdAt": "2023-06-23T16:18:01.913Z",
-        "updatedAt": "2023-07-14T17:15:58.527Z",
+        "updatedAt": "2023-09-15T00:43:41.211Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2440,8 +2524,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 40,
-        "publishedAt": "2023-07-14T17:15:58.527Z",
+        "publishedVersion": 54,
+        "publishedAt": "2023-09-15T00:43:41.211Z",
         "firstPublishedAt": "2023-06-23T16:18:13.239Z",
         "createdBy": {
           "sys": {
@@ -2457,8 +2541,8 @@
             "id": "0M2OMilZGA0ZdWZQFpp2lI"
           }
         },
-        "publishedCounter": 13,
-        "version": 41,
+        "publishedCounter": 18,
+        "version": 55,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2522,12 +2606,30 @@
             }
           ]
         },
-        "icons": {
+        "horizontalIcons": {
           "en-US": {
             "sys": {
               "type": "Link",
               "linkType": "Entry",
-              "id": "65KBBa5HShtiMidxnJjjFo"
+              "id": "5pkHN5HGG11a2guH60R4yW"
+            }
+          }
+        },
+        "verticalIcons": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1czbWtz6MCYdWNwZq69ZJA"
+            }
+          }
+        },
+        "gallery": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "29u9OIwfH8a0hGBNbT9qpu"
             }
           }
         },
@@ -2536,7 +2638,7 @@
             "sys": {
               "type": "Link",
               "linkType": "Asset",
-              "id": "2J6swDF2B8RHz9kX4tUM9T"
+              "id": "40lcGlrIHNjNSbG3ukOvWX"
             }
           }
         },
@@ -2854,7 +2956,7 @@
         "id": "3JPJVSxldKjOJduxnuHtBp",
         "type": "Entry",
         "createdAt": "2023-07-03T22:23:13.806Z",
-        "updatedAt": "2023-07-04T01:26:40.432Z",
+        "updatedAt": "2023-09-15T00:32:39.713Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2862,8 +2964,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 10,
-        "publishedAt": "2023-07-04T01:26:40.432Z",
+        "publishedVersion": 13,
+        "publishedAt": "2023-09-15T00:32:39.713Z",
         "firstPublishedAt": "2023-07-03T22:23:55.437Z",
         "createdBy": {
           "sys": {
@@ -2879,8 +2981,8 @@
             "id": "0M2OMilZGA0ZdWZQFpp2lI"
           }
         },
-        "publishedCounter": 4,
-        "version": 11,
+        "publishedCounter": 5,
+        "version": 14,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2907,7 +3009,7 @@
             "sys": {
               "type": "Link",
               "linkType": "Asset",
-              "id": "4w4U22fI62TCMZbc5MoZUc"
+              "id": "Pi80YGo5blBL9FpYd37xk"
             }
           }
         }
@@ -3398,7 +3500,7 @@
         "id": "5qmxVe3KiWX1JuYF0WQLjF",
         "type": "Entry",
         "createdAt": "2023-07-13T15:03:29.430Z",
-        "updatedAt": "2023-07-13T15:20:54.657Z",
+        "updatedAt": "2023-09-15T00:43:41.262Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -3406,8 +3508,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 12,
-        "publishedAt": "2023-07-13T15:20:54.657Z",
+        "publishedVersion": 18,
+        "publishedAt": "2023-09-15T00:43:41.262Z",
         "firstPublishedAt": "2023-07-13T15:20:54.657Z",
         "createdBy": {
           "sys": {
@@ -3423,8 +3525,8 @@
             "id": "0M2OMilZGA0ZdWZQFpp2lI"
           }
         },
-        "publishedCounter": 1,
-        "version": 13,
+        "publishedCounter": 2,
+        "version": 19,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -3444,7 +3546,7 @@
       },
       "fields": {
         "eventName": {
-          "en-US": "Distinguished Alumni"
+          "en-US": "Event Name 1"
         },
         "eventStartDate": {
           "en-US": "2023-11-03T18:00-06:00"
@@ -3454,12 +3556,12 @@
         },
         "eventLocation": {
           "en-US": {
-            "lat": 32.29703,
-            "lon": -106.718
+            "lon": -106.718,
+            "lat": 32.29703
           }
         },
         "eventLocationName": {
-          "en-US": "Farm & Ranch Heritage"
+          "en-US": "Event Location 1"
         }
       }
     },
@@ -3479,7 +3581,7 @@
         "id": "3TV7fa0h1SqGretPccSG5U",
         "type": "Entry",
         "createdAt": "2023-07-13T15:05:26.804Z",
-        "updatedAt": "2023-07-14T14:30:22.692Z",
+        "updatedAt": "2023-09-15T00:43:41.285Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -3487,8 +3589,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 16,
-        "publishedAt": "2023-07-14T14:30:22.692Z",
+        "publishedVersion": 21,
+        "publishedAt": "2023-09-15T00:43:41.285Z",
         "firstPublishedAt": "2023-07-13T15:20:54.768Z",
         "createdBy": {
           "sys": {
@@ -3504,8 +3606,8 @@
             "id": "0M2OMilZGA0ZdWZQFpp2lI"
           }
         },
-        "publishedCounter": 2,
-        "version": 17,
+        "publishedCounter": 3,
+        "version": 22,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -3525,7 +3627,7 @@
       },
       "fields": {
         "eventName": {
-          "en-US": "HOCO Tailgate"
+          "en-US": "Event Name 2"
         },
         "eventStartDate": {
           "en-US": "2023-11-04T18:00-06:00"
@@ -3540,7 +3642,7 @@
           }
         },
         "eventLocationName": {
-          "en-US": "Farm & Ranch Heritage"
+          "en-US": "Event Location 2"
         }
       }
     },
@@ -3560,7 +3662,7 @@
         "id": "52yB2RN9DlXSycjqmK8jN",
         "type": "Entry",
         "createdAt": "2023-07-13T15:06:10.460Z",
-        "updatedAt": "2023-07-14T14:30:22.725Z",
+        "updatedAt": "2023-09-15T00:43:41.302Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -3568,8 +3670,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 16,
-        "publishedAt": "2023-07-14T14:30:22.725Z",
+        "publishedVersion": 22,
+        "publishedAt": "2023-09-15T00:43:41.302Z",
         "firstPublishedAt": "2023-07-13T15:20:54.786Z",
         "createdBy": {
           "sys": {
@@ -3585,8 +3687,8 @@
             "id": "0M2OMilZGA0ZdWZQFpp2lI"
           }
         },
-        "publishedCounter": 2,
-        "version": 17,
+        "publishedCounter": 3,
+        "version": 23,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -3606,7 +3708,7 @@
       },
       "fields": {
         "eventName": {
-          "en-US": "Golden Aggies"
+          "en-US": "Event Name 3"
         },
         "eventStartDate": {
           "en-US": "2023-11-05T18:00-06:00"
@@ -3621,100 +3723,7 @@
           }
         },
         "eventLocationName": {
-          "en-US": "Farm & Ranch Heritage"
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "jhxfvpiwf9w0"
-          }
-        },
-        "id": "65KBBa5HShtiMidxnJjjFo",
-        "type": "Entry",
-        "createdAt": "2023-07-14T17:14:34.308Z",
-        "updatedAt": "2023-07-14T17:15:58.580Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 5,
-        "publishedAt": "2023-07-14T17:15:58.580Z",
-        "firstPublishedAt": "2023-07-14T17:15:58.580Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "0M2OMilZGA0ZdWZQFpp2lI"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "0M2OMilZGA0ZdWZQFpp2lI"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 6,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "0M2OMilZGA0ZdWZQFpp2lI"
-          }
-        },
-        "automationTags": [
-        ],
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "iconGroup"
-          }
-        }
-      },
-      "fields": {
-        "icons": {
-          "en-US": [
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "3KIfwBHcbhCMGeYwfI8Jeb"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "yZQpnek3q2BkNQOQvPKkJ"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "FrEnjEIdsJDIhBKv2dDJA"
-              }
-            }
-          ]
-        },
-        "orientation": {
-          "en-US": [
-            "Horizontal"
-          ]
+          "en-US": "Event Location 3"
         }
       }
     },
@@ -3734,7 +3743,7 @@
         "id": "3KIfwBHcbhCMGeYwfI8Jeb",
         "type": "Entry",
         "createdAt": "2023-07-14T17:14:38.890Z",
-        "updatedAt": "2023-07-14T17:15:58.599Z",
+        "updatedAt": "2023-09-15T00:43:41.325Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -3742,8 +3751,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 6,
-        "publishedAt": "2023-07-14T17:15:58.599Z",
+        "publishedVersion": 9,
+        "publishedAt": "2023-09-15T00:43:41.325Z",
         "firstPublishedAt": "2023-07-14T17:15:58.599Z",
         "createdBy": {
           "sys": {
@@ -3759,8 +3768,8 @@
             "id": "0M2OMilZGA0ZdWZQFpp2lI"
           }
         },
-        "publishedCounter": 1,
-        "version": 7,
+        "publishedCounter": 2,
+        "version": 10,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -3790,7 +3799,7 @@
             "sys": {
               "type": "Link",
               "linkType": "Asset",
-              "id": "2J6swDF2B8RHz9kX4tUM9T"
+              "id": "3XtS82wwB8f4De4nd2UimR"
             }
           }
         }
@@ -3812,7 +3821,7 @@
         "id": "yZQpnek3q2BkNQOQvPKkJ",
         "type": "Entry",
         "createdAt": "2023-07-14T17:15:25.162Z",
-        "updatedAt": "2023-07-14T17:15:58.613Z",
+        "updatedAt": "2023-09-15T13:33:44.920Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -3820,8 +3829,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2023-07-14T17:15:58.613Z",
+        "publishedVersion": 13,
+        "publishedAt": "2023-09-15T13:33:44.920Z",
         "firstPublishedAt": "2023-07-14T17:15:58.613Z",
         "createdBy": {
           "sys": {
@@ -3837,8 +3846,8 @@
             "id": "0M2OMilZGA0ZdWZQFpp2lI"
           }
         },
-        "publishedCounter": 1,
-        "version": 6,
+        "publishedCounter": 3,
+        "version": 14,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -3858,7 +3867,7 @@
       },
       "fields": {
         "title": {
-          "en-US": "Class Rings"
+          "en-US": "Do Things!"
         },
         "body": {
           "en-US": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
@@ -3868,7 +3877,7 @@
             "sys": {
               "type": "Link",
               "linkType": "Asset",
-              "id": "2J6swDF2B8RHz9kX4tUM9T"
+              "id": "7LuxLU3CZYZGw5n5hF85V6"
             }
           }
         }
@@ -3890,7 +3899,7 @@
         "id": "FrEnjEIdsJDIhBKv2dDJA",
         "type": "Entry",
         "createdAt": "2023-07-14T17:15:40.610Z",
-        "updatedAt": "2023-07-14T17:15:58.632Z",
+        "updatedAt": "2023-09-15T13:33:44.979Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -3898,8 +3907,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 6,
-        "publishedAt": "2023-07-14T17:15:58.632Z",
+        "publishedVersion": 13,
+        "publishedAt": "2023-09-15T13:33:44.979Z",
         "firstPublishedAt": "2023-07-14T17:15:58.632Z",
         "createdBy": {
           "sys": {
@@ -3915,8 +3924,8 @@
             "id": "0M2OMilZGA0ZdWZQFpp2lI"
           }
         },
-        "publishedCounter": 1,
-        "version": 7,
+        "publishedCounter": 3,
+        "version": 14,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -3936,7 +3945,7 @@
       },
       "fields": {
         "title": {
-          "en-US": "Homecoming & Tailgates"
+          "en-US": "Events and Things"
         },
         "body": {
           "en-US": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
@@ -3946,9 +3955,576 @@
             "sys": {
               "type": "Link",
               "linkType": "Asset",
-              "id": "2J6swDF2B8RHz9kX4tUM9T"
+              "id": "6eVjC5ZthlZDdRP2ROybOx"
             }
           }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhxfvpiwf9w0"
+          }
+        },
+        "id": "5QamvwpBju2FDdk0HAR6GX",
+        "type": "Entry",
+        "createdAt": "2023-07-16T00:58:08.342Z",
+        "updatedAt": "2023-09-15T00:43:41.401Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 14,
+        "publishedAt": "2023-09-15T00:43:41.401Z",
+        "firstPublishedAt": "2023-07-16T01:01:21.817Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 15,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "iconsWithText"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Volunteer"
+        },
+        "body": {
+          "en-US": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer auctor elementum nunc quis cursus. Ut sit amet quam rutrum, blandit enim et, pellentesque nunc."
+        },
+        "iconImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4Rvq86zguTHixqM9GCmJgQ"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhxfvpiwf9w0"
+          }
+        },
+        "id": "HK6TO4zdwpn86DSAvk0lB",
+        "type": "Entry",
+        "createdAt": "2023-07-16T00:58:36.140Z",
+        "updatedAt": "2023-09-15T00:43:41.418Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2023-09-15T00:43:41.418Z",
+        "firstPublishedAt": "2023-07-16T01:01:21.833Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "iconsWithText"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Mentor"
+        },
+        "body": {
+          "en-US": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer auctor elementum nunc quis cursus. Ut sit amet quam rutrum, blandit enim et, pellentesque nunc."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhxfvpiwf9w0"
+          }
+        },
+        "id": "5BYNy0fBNdHWZIOBuuZunv",
+        "type": "Entry",
+        "createdAt": "2023-07-16T00:58:46.528Z",
+        "updatedAt": "2023-09-15T00:43:41.436Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2023-09-15T00:43:41.436Z",
+        "firstPublishedAt": "2023-07-16T01:01:21.849Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "iconsWithText"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Supporting"
+        },
+        "body": {
+          "en-US": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer auctor elementum nunc quis cursus. Ut sit amet quam rutrum, blandit enim et, pellentesque nunc."
+        },
+        "iconImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "NPyJQE1Jzh4TdcmIAZUZz"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhxfvpiwf9w0"
+          }
+        },
+        "id": "1czbWtz6MCYdWNwZq69ZJA",
+        "type": "Entry",
+        "createdAt": "2023-07-17T14:12:29.129Z",
+        "updatedAt": "2023-09-15T00:43:41.384Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 21,
+        "publishedAt": "2023-09-15T00:43:41.384Z",
+        "firstPublishedAt": "2023-07-17T14:14:39.384Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 22,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "verticalIconGroup"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Have an Impact"
+        },
+        "displayTitle": {
+          "en-US": true
+        },
+        "photoLocation": {
+          "en-US": [
+            "Right"
+          ]
+        },
+        "photo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "1uv7LkR86qbJxuPNUR2gXy"
+            }
+          }
+        },
+        "icons": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5QamvwpBju2FDdk0HAR6GX"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "HK6TO4zdwpn86DSAvk0lB"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5BYNy0fBNdHWZIOBuuZunv"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhxfvpiwf9w0"
+          }
+        },
+        "id": "5pkHN5HGG11a2guH60R4yW",
+        "type": "Entry",
+        "createdAt": "2023-07-17T14:13:40.826Z",
+        "updatedAt": "2023-07-17T15:28:30.465Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2023-07-17T15:28:30.465Z",
+        "firstPublishedAt": "2023-07-17T14:14:39.351Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "horizontalIconGroup"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Mission Intro Supporting"
+        },
+        "displayTitle": {
+          "en-US": false
+        },
+        "icons": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3KIfwBHcbhCMGeYwfI8Jeb"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "yZQpnek3q2BkNQOQvPKkJ"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "FrEnjEIdsJDIhBKv2dDJA"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhxfvpiwf9w0"
+          }
+        },
+        "id": "29u9OIwfH8a0hGBNbT9qpu",
+        "type": "Entry",
+        "createdAt": "2023-07-17T14:33:51.648Z",
+        "updatedAt": "2023-09-15T00:43:41.455Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 33,
+        "publishedAt": "2023-09-15T00:43:41.455Z",
+        "firstPublishedAt": "2023-07-17T14:34:54.333Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 34,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "gallery"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Media Gallery"
+        },
+        "photos": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "34LMSwu58PwcqxtZBb6mJJ"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "3hjhuJZXKVzKhCB1qK5PEW"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "7LuxLU3CZYZGw5n5hF85V6"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6eVjC5ZthlZDdRP2ROybOx"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "3XtS82wwB8f4De4nd2UimR"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "NPyJQE1Jzh4TdcmIAZUZz"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "40lcGlrIHNjNSbG3ukOvWX"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4Rvq86zguTHixqM9GCmJgQ"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "C1MN7Nt0Wq6OL6bo7aX4D"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "2Dc8WvHZdWYmdfO9mgDrAT"
+              }
+            }
+          ]
         }
       }
     }
@@ -3967,10 +4543,862 @@
             "id": "jhxfvpiwf9w0"
           }
         },
-        "id": "2J6swDF2B8RHz9kX4tUM9T",
+        "id": "Pi80YGo5blBL9FpYd37xk",
         "type": "Asset",
-        "createdAt": "2023-06-23T16:22:14.473Z",
-        "updatedAt": "2023-06-23T16:23:22.116Z",
+        "createdAt": "2023-09-15T00:32:28.018Z",
+        "updatedAt": "2023-09-15T00:32:39.710Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-09-15T00:32:39.710Z",
+        "firstPublishedAt": "2023-09-15T00:32:39.710Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "vecteezy_logo-mountain-with-rectangle-frame-design-icon-template_21059601.jpg"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jhxfvpiwf9w0/Pi80YGo5blBL9FpYd37xk/014de20f63ed257e9a82240c16ec9e7e/vecteezy_logo-mountain-with-rectangle-frame-design-icon-template_21059601.jpg",
+            "details": {
+              "size": 100622,
+              "image": {
+                "width": 1920,
+                "height": 1280
+              }
+            },
+            "fileName": "vecteezy_logo-mountain-with-rectangle-frame-design-icon-template_21059601.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhxfvpiwf9w0"
+          }
+        },
+        "id": "3hjhuJZXKVzKhCB1qK5PEW",
+        "type": "Asset",
+        "createdAt": "2023-09-15T00:34:46.358Z",
+        "updatedAt": "2023-09-15T00:43:41.176Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-09-15T00:43:41.176Z",
+        "firstPublishedAt": "2023-09-15T00:43:41.176Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "vecteezy_old-books-on-a-wooden-table-book-stack-in-the-library-room_5930374_832.jpeg"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jhxfvpiwf9w0/3hjhuJZXKVzKhCB1qK5PEW/a1af05bb7323f7441a45083f6302677c/vecteezy_old-books-on-a-wooden-table-book-stack-in-the-library-room_5930374_832.jpeg",
+            "details": {
+              "size": 9386232,
+              "image": {
+                "width": 5896,
+                "height": 3626
+              }
+            },
+            "fileName": "vecteezy_old-books-on-a-wooden-table-book-stack-in-the-library-room_5930374_832.jpeg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhxfvpiwf9w0"
+          }
+        },
+        "id": "34LMSwu58PwcqxtZBb6mJJ",
+        "type": "Asset",
+        "createdAt": "2023-09-15T00:34:46.432Z",
+        "updatedAt": "2023-09-15T00:43:41.174Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-09-15T00:43:41.174Z",
+        "firstPublishedAt": "2023-09-15T00:43:41.174Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "vecteezy_hand-holding-drawing-virtual-lightbulb-with-brain-on-bokeh_7126159_442.jpg"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jhxfvpiwf9w0/34LMSwu58PwcqxtZBb6mJJ/b3dc9e94831e6239af54c5d6fcd865ab/vecteezy_hand-holding-drawing-virtual-lightbulb-with-brain-on-bokeh_7126159_442.jpg",
+            "details": {
+              "size": 2640292,
+              "image": {
+                "width": 6785,
+                "height": 4000
+              }
+            },
+            "fileName": "vecteezy_hand-holding-drawing-virtual-lightbulb-with-brain-on-bokeh_7126159_442.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhxfvpiwf9w0"
+          }
+        },
+        "id": "40lcGlrIHNjNSbG3ukOvWX",
+        "type": "Asset",
+        "createdAt": "2023-09-15T00:37:37.842Z",
+        "updatedAt": "2023-09-15T00:43:41.178Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-09-15T00:43:41.178Z",
+        "firstPublishedAt": "2023-09-15T00:43:41.178Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "pexels-paul-ijsendoorn-33041.jpg"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jhxfvpiwf9w0/40lcGlrIHNjNSbG3ukOvWX/44c3ce45934e69f5518ecb681b448b5b/pexels-paul-ijsendoorn-33041.jpg",
+            "details": {
+              "size": 2058274,
+              "image": {
+                "width": 4167,
+                "height": 2541
+              }
+            },
+            "fileName": "pexels-paul-ijsendoorn-33041.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhxfvpiwf9w0"
+          }
+        },
+        "id": "1uv7LkR86qbJxuPNUR2gXy",
+        "type": "Asset",
+        "createdAt": "2023-09-15T00:38:14.895Z",
+        "updatedAt": "2023-09-15T00:43:41.165Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-09-15T00:43:41.165Z",
+        "firstPublishedAt": "2023-09-15T00:43:41.165Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "pexels-sean-valentine-12879014.jpg"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jhxfvpiwf9w0/1uv7LkR86qbJxuPNUR2gXy/25a72e24217bf918ea00a73b37b464b4/pexels-sean-valentine-12879014.jpg",
+            "details": {
+              "size": 2609197,
+              "image": {
+                "width": 4000,
+                "height": 6000
+              }
+            },
+            "fileName": "pexels-sean-valentine-12879014.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhxfvpiwf9w0"
+          }
+        },
+        "id": "4Rvq86zguTHixqM9GCmJgQ",
+        "type": "Asset",
+        "createdAt": "2023-09-15T00:38:51.852Z",
+        "updatedAt": "2023-09-15T00:43:41.168Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-09-15T00:43:41.168Z",
+        "firstPublishedAt": "2023-09-15T00:43:41.168Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "pexels-nathan-tran-16776159.jpg"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jhxfvpiwf9w0/4Rvq86zguTHixqM9GCmJgQ/05f2ac02f0500ac5bf8bf4b708c0beaa/pexels-nathan-tran-16776159.jpg",
+            "details": {
+              "size": 6919129,
+              "image": {
+                "width": 3872,
+                "height": 5163
+              }
+            },
+            "fileName": "pexels-nathan-tran-16776159.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhxfvpiwf9w0"
+          }
+        },
+        "id": "NPyJQE1Jzh4TdcmIAZUZz",
+        "type": "Asset",
+        "createdAt": "2023-09-15T00:39:18.054Z",
+        "updatedAt": "2023-09-15T00:43:41.171Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-09-15T00:43:41.171Z",
+        "firstPublishedAt": "2023-09-15T00:43:41.171Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "pexels-pixabay-159866.jpg"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jhxfvpiwf9w0/NPyJQE1Jzh4TdcmIAZUZz/dab3174a6861533764797aa5e50a3f94/pexels-pixabay-159866.jpg",
+            "details": {
+              "size": 1593311,
+              "image": {
+                "width": 4754,
+                "height": 3188
+              }
+            },
+            "fileName": "pexels-pixabay-159866.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhxfvpiwf9w0"
+          }
+        },
+        "id": "3XtS82wwB8f4De4nd2UimR",
+        "type": "Asset",
+        "createdAt": "2023-09-15T00:41:02.272Z",
+        "updatedAt": "2023-09-15T00:43:41.154Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-09-15T00:43:41.154Z",
+        "firstPublishedAt": "2023-09-15T00:43:41.154Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "pexels-olena-bohovyk-5345029.jpg"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jhxfvpiwf9w0/3XtS82wwB8f4De4nd2UimR/86e1be87360c2d401a499e917a5cef46/pexels-olena-bohovyk-5345029.jpg",
+            "details": {
+              "size": 3027254,
+              "image": {
+                "width": 2250,
+                "height": 4000
+              }
+            },
+            "fileName": "pexels-olena-bohovyk-5345029.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhxfvpiwf9w0"
+          }
+        },
+        "id": "7LuxLU3CZYZGw5n5hF85V6",
+        "type": "Asset",
+        "createdAt": "2023-09-15T00:41:41.389Z",
+        "updatedAt": "2023-09-15T00:43:41.158Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-09-15T00:43:41.158Z",
+        "firstPublishedAt": "2023-09-15T00:43:41.158Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "pexels-sean-valentine-12879014.jpg"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jhxfvpiwf9w0/7LuxLU3CZYZGw5n5hF85V6/b11e7a9cb8d48e471776890ec008e779/pexels-sean-valentine-12879014.jpg",
+            "details": {
+              "size": 2609197,
+              "image": {
+                "width": 4000,
+                "height": 6000
+              }
+            },
+            "fileName": "pexels-sean-valentine-12879014.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhxfvpiwf9w0"
+          }
+        },
+        "id": "6eVjC5ZthlZDdRP2ROybOx",
+        "type": "Asset",
+        "createdAt": "2023-09-15T00:42:18.435Z",
+        "updatedAt": "2023-09-15T00:43:41.162Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-09-15T00:43:41.162Z",
+        "firstPublishedAt": "2023-09-15T00:43:41.162Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "pexels-olia-danilevich-5088008.jpg"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jhxfvpiwf9w0/6eVjC5ZthlZDdRP2ROybOx/751390057a371985e034767fc5873275/pexels-olia-danilevich-5088008.jpg",
+            "details": {
+              "size": 2573478,
+              "image": {
+                "width": 5555,
+                "height": 3703
+              }
+            },
+            "fileName": "pexels-olia-danilevich-5088008.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhxfvpiwf9w0"
+          }
+        },
+        "id": "2Dc8WvHZdWYmdfO9mgDrAT",
+        "type": "Asset",
+        "createdAt": "2023-09-15T00:43:23.986Z",
+        "updatedAt": "2023-09-15T00:43:41.184Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-09-15T00:43:41.184Z",
+        "firstPublishedAt": "2023-09-15T00:43:41.184Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "pexels-trace-hudson-2618804.jpg"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jhxfvpiwf9w0/2Dc8WvHZdWYmdfO9mgDrAT/666818939613db76fc51a59edcd1b188/pexels-trace-hudson-2618804.jpg",
+            "details": {
+              "size": 1030320,
+              "image": {
+                "width": 2560,
+                "height": 2047
+              }
+            },
+            "fileName": "pexels-trace-hudson-2618804.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhxfvpiwf9w0"
+          }
+        },
+        "id": "C1MN7Nt0Wq6OL6bo7aX4D",
+        "type": "Asset",
+        "createdAt": "2023-09-15T00:43:23.993Z",
+        "updatedAt": "2023-09-15T00:43:41.181Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-09-15T00:43:41.181Z",
+        "firstPublishedAt": "2023-09-15T00:43:41.181Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0M2OMilZGA0ZdWZQFpp2lI"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "pexels-sam-kolder-2387873.jpg"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jhxfvpiwf9w0/C1MN7Nt0Wq6OL6bo7aX4D/147e41cdbcba32f31efa23e60436ce03/pexels-sam-kolder-2387873.jpg",
+            "details": {
+              "size": 3866456,
+              "image": {
+                "width": 5472,
+                "height": 3648
+              }
+            },
+            "fileName": "pexels-sam-kolder-2387873.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhxfvpiwf9w0"
+          }
+        },
+        "id": "52DxTLyAItNHK9dX2UEuoB",
+        "type": "Asset",
+        "createdAt": "2023-09-15T00:45:57.388Z",
+        "updatedAt": "2023-09-15T00:46:18.391Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -3979,8 +5407,8 @@
           }
         },
         "publishedVersion": 3,
-        "publishedAt": "2023-06-23T16:23:22.116Z",
-        "firstPublishedAt": "2023-06-23T16:23:22.116Z",
+        "publishedAt": "2023-09-15T00:46:18.391Z",
+        "firstPublishedAt": "2023-09-15T00:46:18.391Z",
         "createdBy": {
           "sys": {
             "type": "Link",
@@ -4007,236 +5435,20 @@
       },
       "fields": {
         "title": {
-          "en-US": "zuhl-library"
-        },
-        "description": {
-          "en-US": ""
+          "en-US": "pexels-vasanth-babu-797797"
         },
         "file": {
           "en-US": {
-            "url": "//images.ctfassets.net/jhxfvpiwf9w0/2J6swDF2B8RHz9kX4tUM9T/69f233f3decd0ae1080028149cfad49c/zuhl-library.jpg",
+            "url": "//images.ctfassets.net/jhxfvpiwf9w0/52DxTLyAItNHK9dX2UEuoB/e07b4df3c86a7f3afe30f057d0148905/pexels-vasanth-babu-797797.jpg",
             "details": {
-              "size": 386556,
+              "size": 2762398,
               "image": {
-                "width": 1920,
-                "height": 700
+                "width": 5184,
+                "height": 3456
               }
             },
-            "fileName": "zuhl-library.jpg",
+            "fileName": "pexels-vasanth-babu-797797.jpg",
             "contentType": "image/jpeg"
-          }
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "jhxfvpiwf9w0"
-          }
-        },
-        "id": "3PBXHgfOKqCg74BMXQ6npC",
-        "type": "Asset",
-        "createdAt": "2023-07-03T22:23:41.289Z",
-        "updatedAt": "2023-07-03T22:23:55.352Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 2,
-        "publishedAt": "2023-07-03T22:23:55.352Z",
-        "firstPublishedAt": "2023-07-03T22:23:55.352Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "0M2OMilZGA0ZdWZQFpp2lI"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "0M2OMilZGA0ZdWZQFpp2lI"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 3,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "0M2OMilZGA0ZdWZQFpp2lI"
-          }
-        }
-      },
-      "fields": {
-        "title": {
-          "en-US": "AAA-logo.png"
-        },
-        "file": {
-          "en-US": {
-            "url": "//images.ctfassets.net/jhxfvpiwf9w0/3PBXHgfOKqCg74BMXQ6npC/135e78e4f692a843bbb7a553ca099a1f/AAA-logo.png",
-            "details": {
-              "size": 7478,
-              "image": {
-                "width": 961,
-                "height": 146
-              }
-            },
-            "fileName": "AAA-logo.png",
-            "contentType": "image/png"
-          }
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "jhxfvpiwf9w0"
-          }
-        },
-        "id": "3x2wqzCrs5MqsuMBI2cIpL",
-        "type": "Asset",
-        "createdAt": "2023-07-04T01:24:15.464Z",
-        "updatedAt": "2023-07-04T01:24:24.892Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 2,
-        "publishedAt": "2023-07-04T01:24:24.892Z",
-        "firstPublishedAt": "2023-07-04T01:24:24.892Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "0M2OMilZGA0ZdWZQFpp2lI"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "0M2OMilZGA0ZdWZQFpp2lI"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 3,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "0M2OMilZGA0ZdWZQFpp2lI"
-          }
-        }
-      },
-      "fields": {
-        "title": {
-          "en-US": "alumni-logo.png"
-        },
-        "file": {
-          "en-US": {
-            "url": "//images.ctfassets.net/jhxfvpiwf9w0/3x2wqzCrs5MqsuMBI2cIpL/fd2c86027dd9f266d0b96faa9a2aad58/alumni-logo.png",
-            "details": {
-              "size": 6278,
-              "image": {
-                "width": 324,
-                "height": 146
-              }
-            },
-            "fileName": "alumni-logo.png",
-            "contentType": "image/png"
-          }
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "jhxfvpiwf9w0"
-          }
-        },
-        "id": "4w4U22fI62TCMZbc5MoZUc",
-        "type": "Asset",
-        "createdAt": "2023-07-04T01:26:30.507Z",
-        "updatedAt": "2023-07-04T01:26:40.427Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 2,
-        "publishedAt": "2023-07-04T01:26:40.427Z",
-        "firstPublishedAt": "2023-07-04T01:26:40.427Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "0M2OMilZGA0ZdWZQFpp2lI"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "0M2OMilZGA0ZdWZQFpp2lI"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 3,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "0M2OMilZGA0ZdWZQFpp2lI"
-          }
-        }
-      },
-      "fields": {
-        "title": {
-          "en-US": "alumni-logo.png"
-        },
-        "file": {
-          "en-US": {
-            "url": "//images.ctfassets.net/jhxfvpiwf9w0/4w4U22fI62TCMZbc5MoZUc/ec232a7594ecfecd5dea0ca03cebe75c/alumni-logo.png",
-            "details": {
-              "size": 113119,
-              "image": {
-                "width": 1548,
-                "height": 698
-              }
-            },
-            "fileName": "alumni-logo.png",
-            "contentType": "image/png"
           }
         }
       }

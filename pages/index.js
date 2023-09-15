@@ -62,7 +62,6 @@ export default function Index({ preview, allPages, subpages, header, events, tex
           <MediaGallery images={gallery}/>
 
         }
-
       </Layout>
     </>
   )

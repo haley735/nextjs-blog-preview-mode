@@ -72,7 +72,7 @@ export default function MediaGallery({ images }) {
 
 
   const customOverlay = (
-    <div onMouseEnter={handleHover} className="bg-crimson w-24 h-24">
+    <div onMouseEnter={handleHover} className="bg-navy w-24 h-24">
       <p>Testing</p>
       <div className="text-white font-gotham-light">Testing</div>
     </div>
@@ -82,8 +82,8 @@ export default function MediaGallery({ images }) {
       <div className="z-50 mb-8">
         <Divider options={{marginBottom: false}}></Divider>
       </div>
-      {/* <div onMouseEnter={handleHover} onMouseLeave={handleHoverRemove} className="bg-crimson w-24 h-24"> */}
-        {/* <div id="hover-reveal" className="none transition-opacity duration-500 ease-in opacity-0 hover:opacity-100 hover:block bg-crimson w-24 h-24">
+      {/* <div onMouseEnter={handleHover} onMouseLeave={handleHoverRemove} className="bg-navy w-24 h-24"> */}
+        {/* <div id="hover-reveal" className="none transition-opacity duration-500 ease-in opacity-0 hover:opacity-100 hover:block bg-navy w-24 h-24">
           
           <button className="block justify-center">
             <Link className="items-center" href='/'>
@@ -99,7 +99,7 @@ export default function MediaGallery({ images }) {
         </div> */}
 
         <div className="relative ">
-          <div className="absolute inset-0 z-10 bg-crimson text-center flex flex-col items-center justify-center opacity-0 hover:opacity-100 bg-opacity-90 duration-300">
+          <div className="absolute inset-0 z-10 bg-navy text-center flex flex-col items-center justify-center opacity-0 hover:opacity-100 bg-opacity-90 duration-300">
             <button className="block justify-center">
                 <Link className="items-center" href='/'>
                   <svg 
@@ -122,7 +122,7 @@ export default function MediaGallery({ images }) {
 
         <div className='container w-full h-fit bg-lightergrey relative -z-10 -mt-12'>
           <div className="mx-12"><br></br> <br></br> <br></br></div>
-          <h3 className="text-crimson text-center text-6xl font-gotham-medium tracking-widest">
+          <h3 className="text-teal text-center text-6xl font-gotham-medium tracking-widest">
             {title.toUpperCase()}
           </h3>
           <Gallery margin={10} images={newImageList} enableImageSelection={false}/>

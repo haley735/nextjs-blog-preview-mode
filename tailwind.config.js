@@ -39,7 +39,10 @@ module.exports = {
         cyan: '#79FFE1',
         crimson: '#8C0B42',
         lightgrey: '#D3D3D3',
-        lightergrey: '#F5F5F5'
+        lightergrey: '#F5F5F5',
+        navy: '#172554',
+        darkcyan: '#083344',
+        teal: '#042f2e'
       },
       spacing: {
         28: '7rem',
@@ -104,7 +107,7 @@ module.exports = {
         // // => @media (min-width: 1536px) { ... }
       // },
       backgroundImage: {
-        'event-banner': "url('/images/parallax-02.jpg')",
+        'event-banner': "url('/images/pexels-joey-kyber-119564.jpg')",
       }
     },
   },

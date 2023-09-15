@@ -14,7 +14,7 @@ export default function HorizontalIcons({ icons }) {
       <>
       <div className="container w-full h-max mx-auto p-5">
         {displayTitle && 
-          <h3 className="text-6xl md:text-4xl font-gotham-bold text-crimson tracking-widest leading-tight md:pr-8">
+          <h3 className="text-6xl md:text-4xl font-gotham-bold text-teal tracking-widest leading-tight md:pr-8">
             {title.toUpperCase()}
           </h3>
          }
