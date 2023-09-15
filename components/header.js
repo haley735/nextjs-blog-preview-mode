@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import React, { StrictMode } from 'react';
 import { useState } from 'react';
 
@@ -12,6 +13,10 @@ import { useState } from 'react';
  */
 
 export default function Header({pages, subpages, headerMedia}) {
+  // const { href: currentUrl, pathname } = useUrl() ?? {};
+  const { pathname } = useRouter();
+  console.log('router: ', useRouter());
+  const regex = /^\/$/;
   const logo = headerMedia && headerMedia[0]?.logo?.url;
   const headerImg = headerMedia && headerMedia[0]?.headerImg?.url;
   const headerVideo = headerMedia && headerMedia[0]?.headerVideo?.url;
@@ -62,20 +67,21 @@ export default function Header({pages, subpages, headerMedia}) {
           </ul>
         </div>
       </div>
-      {/* work on divider line */}
-      {/* <hr class="my-12 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50" /> */}
     </nav>
-    <div className='container mx-auto bg-navy'>
-      <div className='flex flex-col justify-center bg-navy h-96 w-full'>
-        {/* work on the z-index to overlay photo or video behind text */}
-        <div >
-          <h2 className='text-white text-center font-gotham-light text-4xl m-2'> Always Committed to </h2>
-        </div>
-        <div>
-          <h1 className='text-white text-center font-look-script text-9xl'>Excellence</h1>
+    {pathname.match(regex) &&
+        <div className='container mx-auto bg-navy'>
+        <div className='flex flex-col justify-center bg-navy h-96 w-full'>
+          {/* work on the z-index to overlay photo or video behind text */}
+          <div >
+            <h2 className='text-white text-center font-gotham-light text-4xl m-2'> Always Committed to </h2>
+          </div>
+          <div>
+            <h1 className='text-white text-center font-look-script text-9xl'>Excellence</h1>
+          </div>
         </div>
       </div>
-    </div>
+    }
+    
     
     {headerVideo &&   
       // prioritize video over photo 
