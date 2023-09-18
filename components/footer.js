@@ -5,7 +5,8 @@ export default function Footer() {
   return (
     <footer className="bg-navy border-t border-accent-2">
       <Container>
-        <div className="ml-28 mr-12 py-28 flex flex-col sm:flex-row md:flex-col items-center">
+        <div className="items-center w-full">
+        <div className="py-28 flex flex-col sm:flex-row md:flex-col items-center">
           <h2 className="text-white font-gotham-light text-3xl">
             Company Name 
           </h2>
@@ -87,7 +88,7 @@ export default function Footer() {
           </div>
           </div>
         </div>
-        
+        </div>
       </Container>
     </footer>
   )
