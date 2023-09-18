@@ -29,7 +29,7 @@ export default function VerticalIcons({ icons }) {
             </div>
           }
           <div className="flex flex-col md:flex-row w-3/4 pr-4 items-start mb-4">
-            {iconsList.map((icon, index) => {
+            {iconsList && iconsList.map((icon, index) => {
                 return (
                   <React.Fragment key={'iconGroup-' + index}>
                       <div className="flex flex-row md:flex-col w-full ml-12 items-center mb-8">

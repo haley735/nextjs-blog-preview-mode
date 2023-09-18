@@ -13,13 +13,13 @@ export default function HorizontalIcons({ icons }) {
   return (
       <>
       <div className="container w-full h-max mx-auto p-5">
-        {displayTitle && 
+        {displayTitle && title && 
           <h3 className="text-6xl md:text-4xl font-gotham-bold text-teal tracking-widest leading-tight md:pr-8">
             {title.toUpperCase()}
           </h3>
          }
           <>
-          {imagePlacement && imagePlacement == 'Top' && image &&
+          {imagePlacement && imagePlacement == 'Top' && image && title && 
             <div className="relative w-full h-48">
               <ContentfulImage 
                 src={image}
@@ -31,7 +31,7 @@ export default function HorizontalIcons({ icons }) {
             </div>
           }
             <div className="flex flex-row md:flex-col justify-between items-start mb-4 mx-12">
-              {iconsList.map((icon, index) => {
+              {iconsList && iconsList.map((icon, index) => {
                 return (
                   <React.Fragment key={'iconGroup-' + index}>
                       <div className="flex flex-col justify-between items-center">

@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export default function UpcomingEvents({ events }) {
-  const eventList = events.events.eventsCollection.items;
+  const eventList = events?.events?.eventsCollection.items;
   function formatDateAndTime(field1, field2){
     const date = new Date(field1);
     const date2 = new Date(field2);

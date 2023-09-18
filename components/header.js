@@ -15,7 +15,7 @@ import { useState } from 'react';
 export default function Header({pages, subpages, headerMedia}) {
   // const { href: currentUrl, pathname } = useUrl() ?? {};
   const { pathname } = useRouter();
-  console.log('router: ', useRouter());
+  // console.log('router: ', useRouter());
   const regex = /^\/$/;
   const logo = headerMedia && headerMedia[0]?.logo?.url;
   const headerImg = headerMedia && headerMedia[0]?.headerImg?.url;
@@ -28,9 +28,9 @@ export default function Header({pages, subpages, headerMedia}) {
         <a href="/" className="flex items-center ">
           <img src={logo && logo} className="h-24 w-48 mr-6 ml-28" alt="Alumni Logo"></img>
         </a>
-        <div className="flex md:flex-wrap order-2 lg:mr-24">
+        {/* <div className="flex md:flex-wrap order-2 lg:mr-24">
             <button type="button" className="ml-4 mr-14 text-white bg-navy hover:bg-lightgrey focus:ring-4 focus:outline-none focus:ring-blue-300 font-gotham-light rounded-lg text-md px-4 py-2 text-center ">Give Back</button>
-        </div>
+        </div> */}
         <div className="flex grow flex-col items-center h-24 justify-between w-auto md:hidden flex lg:flex xl:flex 2xl:flex  md:w-auto order-1" id="navbar-sticky">  
           <ul className="flex space-between py-8 md:p-0 font-medium md:flex-col md:space-x-8 md:mt-0">
             {pages && pages.map((page, index) => {
