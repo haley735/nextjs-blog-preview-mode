@@ -28,7 +28,7 @@ export default function VerticalIcons({ icons }) {
               />
             </div>
           }
-          <div className="flex flex-col md:flex-row w-3/4 pr-4 items-start mb-4">
+          <div className="flex flex-col w-3/4 pr-4 items-start mb-4">
             {iconsList && iconsList.map((icon, index) => {
                 return (
                   <React.Fragment key={'iconGroup-' + index}>
@@ -41,7 +41,7 @@ export default function VerticalIcons({ icons }) {
                             alt={icon.title}
                           />
                         </div>
-                        <div className="flex flex-col md:flex-row w-3/4 justify-between items-left p-4">
+                        <div className="flex flex-col w-3/4 justify-between items-left p-4">
                           <div className="w-48 h-16 mb-0 p-4">
                             <h3 className="text-left text-3xl text-black font-gotham-medium mt-5">{icon.title}</h3>
                           </div>
