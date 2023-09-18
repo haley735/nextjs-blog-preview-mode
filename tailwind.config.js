@@ -37,7 +37,6 @@ module.exports = {
         'accent-7': '#333',
         success: '#0070f3',
         cyan: '#79FFE1',
-        crimson: '#8C0B42',
         lightgrey: '#D3D3D3',
         lightergrey: '#F5F5F5',
         navy: '#172554',
