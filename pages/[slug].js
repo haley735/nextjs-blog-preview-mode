@@ -35,9 +35,9 @@ export default function Page({ page, pages, header, preview, posts, hero, intro 
           {intro && intro.length && 
             <Intro intros={textIntros}/>
           }
-          {hero && 
+          {hero && hero.heroText && hero.heroImage && (
             <Hero title={hero.title} document={hero.heroText.json} heroImageUrl={hero.heroImage.url} slug={null}/>
-          }
+          )}
           {posts && posts.length > 0 && (
             <>
               <Divider options={{'marginBottom': true}}/>
