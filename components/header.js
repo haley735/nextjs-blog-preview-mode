@@ -21,7 +21,7 @@ export default function Header({pages, subpages, headerMedia}) {
   // TODO: fix subpages being matched up to correct page
   return (
     <>
-    <nav aria-label="primary" className="bg-white sticky w-full top-0 left-0">
+    <nav aria-label="primary" className="bg-white sticky w-full top-0 left-0 z-40">
       <div className="flex items-center">
       <div className="max-w-screen-xl flex flex-row md:flex-col items-center mx-auto p-4">
         <a href="/" className="flex items-center ">
