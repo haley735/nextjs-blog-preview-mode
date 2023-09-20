@@ -20,42 +20,27 @@ import VerticalIcons from '@components/vertical-icons'
 import MediaGallery from '@components/media-gallery'
 
 export default function Index({ preview, allPages, subpages, header, events, textIntros, horizontalIconGroups, verticalIconGroups, gallery }) {
-  // const heroPost = allPosts[0];
-  // const morePosts = allPosts.slice(1);
   return (
     <>
       <Layout preview={preview} >
         <Header pages={allPages} headerMedia={header} subpages={subpages}/>
         <Container>
-          <Intro intros={textIntros}/>
-          <Divider options={{'marginBottom': true}}></Divider>
-          {horizontalIconGroups &&
-            <HorizontalIcons icons={horizontalIconGroups}/>
-
+          {textIntros && textIntros.length && 
+            <Intro intros={textIntros}/>
           }
-          {/* {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
-            />
-          )} */}
-          {/* <Divider></Divider> */}
-          
-          {/* {morePosts.length > 0 && <MoreStories posts={morePosts} />} */}
+          <Divider options={{'marginBottom': true}}></Divider>
+          {horizontalIconGroups && horizontalIconGroups.length &&
+            <HorizontalIcons icons={horizontalIconGroups}/>
+          }
         </Container>
-        {events && (
+        {events && events.length && (
             <UpcomingEvents events={events}/>
           )}
-        {verticalIconGroups &&
+        {verticalIconGroups && verticalIconGroups.length &&
           <VerticalIcons icons={verticalIconGroups}/>
         }
-        {gallery && 
+        {gallery && gallery.length &&
           <MediaGallery images={gallery}/>
-
         }
       </Layout>
     </>
@@ -72,13 +57,9 @@ export async function getStaticProps({ preview = false }) {
   const horizontalIconGroups = (await getHorizontalIconsForPage('home', preview)) ?? [];
   const verticalIconGroups = (await getVerticalIconsForPage('home', preview)) ?? [];
   const gallery = (await getGallery(preview)) ?? [];
-  // console.log('h-icons: ', horizontalIconGroups);
   
   //TODO: update subpages api to have nested navigation
   const subpages = [];
-  // if(allPages.length > 0){
-  //   allPages = allPages.reverse();
-  // }
   return {
     props: { preview, allPages, header, subpages, events, textIntros, horizontalIconGroups, verticalIconGroups, gallery },
   }

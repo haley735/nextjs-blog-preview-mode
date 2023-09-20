@@ -32,10 +32,10 @@ export default function Page({ page, pages, header, preview, posts, hero, intro 
           <p>Loading…</p>
         ) : (
           <>
-          {intro &&
+          {intro && intro.length && 
             <Intro intros={textIntros}/>
           }
-          {hero &&
+          {hero && hero.length &&
             <Hero title={hero.title} document={hero.heroText.json} heroImageUrl={hero.heroImage.url} slug={null}/>
           }
           {posts && posts.length > 0 && (
