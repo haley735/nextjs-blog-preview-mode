@@ -1,20 +1,23 @@
 import { useRouter } from 'next/router'
-import Head from 'next/head'
 import ErrorPage from 'next/error'
-import Container from '../components/container'
-import PostBody from '../components/post-body'
-import MoreStories from '../components/more-stories'
-import Header from '../components/header'
-import PostHeader from '../components/post-header'
-import SectionSeparator from '../components/section-separator'
-import Layout from '../components/layout'
-import { getAllPagesWithSlug, getPageAndMorePages, getAllPagesForHome, getHeaderForSlug } from '../lib/api'
-import PostTitle from '../components/post-title'
-import { CMS_NAME } from '../lib/constants'
+import Container from '@components/container'
+import MoreStories from '@components/more-stories'
+import Header from '@components/header'
+import Layout from '@components/layout'
+import { getAllPagesWithSlug, 
+  getPageAndMorePages, 
+  getAllPagesForHome, 
+  getHeaderForSlug,
+  getPostBySource,
+  getHero } from '@api'
+import Intro from '@components/intro'
+import Hero from '@components/contentful-hero-post'
+import Divider from '../components/divider'
 
-export default function Page({ page, pages, header, preview }) {
+export default function Page({ page, pages, header, preview, posts, hero, intro }) {
   const router = useRouter();
-  // console.log('morePages: ', pages);
+  console.log('posts: ', posts);
+  console.log('hero: ', hero);
 
   if (!router.isFallback && !page) {
     return <ErrorPage statusCode={404} />
@@ -29,29 +32,20 @@ export default function Page({ page, pages, header, preview }) {
           <p>Loading…</p>
         ) : (
           <>
-            <p>We have a page</p>
-           </>
-          // <>
-          //   <article>
-          //     <Head>
-          //       <title>
-          //         {`${post.title} | Next.js Blog Example with ${CMS_NAME}`}
-          //       </title>
-          //       <meta property="og:image" content={post.coverImage.url} />
-          //     </Head>
-          //     <PostHeader
-          //       title={post.title}
-          //       coverImage={post.coverImage}
-          //       date={post.date}
-          //       author={post.author}
-          //     />
-          //     <PostBody content={post.content} />
-          //   </article>
-          //   <SectionSeparator />
-          //   {morePosts && morePosts.length > 0 && (
-          //     <MoreStories posts={morePosts} />
-          //   )}
-          // </>
+          {intro &&
+            <Intro intros={textIntros}/>
+          }
+          {hero &&
+            <Hero title={hero.title} document={hero.heroText.json} heroImageUrl={hero.heroImage.url} slug={null}/>
+          }
+          {posts && posts.length > 0 && (
+            <>
+              <Divider options={{'marginBottom': true}}/>
+              <MoreStories posts={posts} />
+            </>
+          )}
+          </>
+          
         )}
       </Container>
     </Layout>
@@ -60,14 +54,18 @@ export default function Page({ page, pages, header, preview }) {
 
 export async function getStaticProps({ params, preview = false }) {
   const data = await getPageAndMorePages(params.slug, preview);
+  const posts = (await getPostBySource(data?.page.title)) ?? [] 
   const allPages = (await getAllPagesForHome(preview)) ?? []
   const header = (await getHeaderForSlug(preview)) ?? []
+  const hero = (await getHero(params.slug, preview)) ?? []
   return {
     props: {
       preview,
       page: data?.page ?? null,
       pages: allPages,
-      header: header
+      header: header,
+      posts: posts,
+      hero: hero,
     },
   }
 }
