@@ -14,9 +14,9 @@ export default function Footer() {
             Goes Here
           </h3>
           <div className="flex flex-row sm:flex-col justify-center items-center lg:pl-4 lg:w-1/2">
-            <div className="flex md:flex-col flex-row">
+            <div className="flex items-center md:flex-col flex-row">
               {/* <!-- Facebook --> */}
-              <div className="ml-8 mr-8">
+              <div className="p-4">
                 <button className='rounded-full bg-navy border-4 border-solid border-white h-16 w-16'>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@ export default function Footer() {
                 </button>
               </div>
               
-              <div className="mr-8">
+              <div className="p-4">
                 <button className='rounded-full bg-navy border-4 border-solid border-white h-16 w-16'>
                   {/* <!-- Instagram --> */}
                   <svg
@@ -43,7 +43,7 @@ export default function Footer() {
                 </button>
               </div>
 
-              <div className="mr-8">
+              <div className="p-4">
                 <button className='rounded-full bg-navy border-4 border-solid border-white h-16 w-16'>
                   {/* <!-- Youtube --> */}
                   <svg
@@ -57,7 +57,7 @@ export default function Footer() {
                 </button>
               </div>
 
-              <div className="mr-8">
+              <div className="p-4">
                 <button className='rounded-full bg-navy border-4 border-solid border-white h-16 w-16'>
                   {/* <!-- Twitter --> */}
                   <svg
@@ -71,7 +71,7 @@ export default function Footer() {
                 </button>
               </div>
 
-              <div className="mr-8">
+              <div className="p-4">
               <button className='rounded-full bg-navy border-4 border-solid border-white h-16 w-16'>
                   {/* <!-- Linkedin --> */}
                   <svg
